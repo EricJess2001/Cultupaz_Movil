@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/cultupaz">
+
+    <fragment
+        android:id="@+id/inicio_sesion"
+        android:name="com.example.cultupazmovil.ui.inicio_sesion"
+        android:label="fragment_inicio_sesion"
+        tools:layout="@layout/fragment_inicio_sesion" />
+    <fragment
+        android:id="@+id/cultupaz"
+        android:name="com.example.cultupazmovil.ui.cultupaz"
+        android:label="fragment_cultupaz"
+        tools:layout="@layout/fragment_cultupaz" />
+    <fragment
+        android:id="@+id/registro"
+        android:name="com.example.cultupazmovil.ui.registro"
+        android:label="fragment_registro"
+        tools:layout="@layout/fragment_registro" />
+    <fragment
+        android:id="@+id/termino_condiciones"
+        android:name="com.example.cultupazmovil.ui.termino_condiciones"
+        android:label="fragment_termino_condiciones"
+        tools:layout="@layout/fragment_termino_condiciones" />
+    <fragment
+        android:id="@+id/menu"
+        android:name="com.example.cultupazmovil.ui.menu"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" />
+    <fragment
+        android:id="@+id/informa"
+        android:name="com.example.cultupazmovil.ui.Informa"
+        android:label="fragment_informa"
+        tools:layout="@layout/fragment_informa" />
+    <fragment
+        android:id="@+id/info_web"
+        android:name="com.example.cultupazmovil.ui.info_web"
+        android:label="fragment_info_web"
+        tools:layout="@layout/fragment_info_web" />
+    <fragment
+        android:id="@+id/sobre_nosotros"
+        android:name="com.example.cultupazmovil.ui.sobre_nosotros"
+        android:label="fragment_sobre_nosotros"
+        tools:layout="@layout/fragment_sobre_nosotros" />
+    <fragment
+        android:id="@+id/cultura"
+        android:name="com.example.cultupazmovil.ui.Cultura"
+        android:label="fragment_cultura"
+        tools:layout="@layout/fragment_cultura" />
+    <fragment
+        android:id="@+id/lgtbi"
+        android:name="com.example.cultupazmovil.ui.lgtbi"
+        android:label="fragment_lgtbi"
+        tools:layout="@layout/fragment_lgtbi" />
+</navigation>

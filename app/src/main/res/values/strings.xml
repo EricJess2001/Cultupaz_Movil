@@ -1,0 +1,77 @@
+<resources>
+    <string name="app_name"></string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Muro</string>
+    <string name="title_notifications">Eventos</string>
+    <string name="title_new">Sing in</string>
+    <string name="empezar_btn">EMPEZAR</string>
+    <string name="bienvenido_name">Bienvenido</string>
+    <string name="txt_terminos_condiciones_name">Te damos una grata bienvenida a Cultupaz interactua en nuestra interfaz movil, para saber mas de nosotros.</string>
+    <string name="txt_terminos_condiciones_2_name">Antes de continuar acepta nuestros terminos y condiciones para que puedas acceder a nuestra plataforma.</string>
+    <string name="acepta_terminos">Aceptar</string>
+    <string name="no_acepta_terminos">Cancelar</string>
+
+
+    <!--  Blogs-->
+    <string name="tittle">Fomentando cultura y paz </string>
+    <string name="descripcion">La cultura de paz inicia con el reconocimiento de los derechos de las y los demás a una vida digna, lo cual se logra mediante el diálogo y la posibilidad de resolver los conflictos de manera positiva, creando las condiciones que lleven a la paz integral</string>
+    <string name="cultura">Cultura de paz</string>
+    <string name="descultura">Garantiza que los conflictos que surgen de las relaciones humanas se resuelven de forma no violenta</string>
+    <string name="derechosl">LGBTIQ+</string>
+    <string name="derechosldescripcion">Igualdad de derechos para las personas LGBTIQ+</string>
+    <string name="derechosmujeres">Derechos a las mujeres</string>
+    <string name="derechosninos">Equidad de genero </string>
+    <string name="equidadgenerodescripcion"> Brinda a las mujeres y a los hombres las mismas oportunidades, condiciones, y formas de trato</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_blog">Blog</string>
+
+
+    <string name="app_nam">Dropdown</string>
+    <string name="select">Select Item</string>
+
+
+
+    <!-- lgtbiq INFORMACION-->
+
+
+    <string name="titulo">LGTBIQ+ Terminología de la diversidad</string>
+    <string name="titulo1">A propósito del esquema del post de mi blog
+        Roles de género – Diversidad sexual, y gracias a algunas dudas
+        que hemos aclarado y otras que aún tenemos al respecto,
+        he decidido recopilar en éste nuevo post la terminología de las
+        siglas LGBTIQ+ además del resto de las que aparecen en el esquema
+        y alguna más con sus correspondientes definiciones, para así
+        compartir con vosotres algunos de los temas que inspiran mis
+        últimos dibujos, con los que grito por laigualdad de
+        género, en una rebelión contra los roles que
+        el heterocispatriarcado impone. LGTBIQ+  son las siglas que designan
+        colectivamente lésbico, gay, bisexual,trans, intersexual,
+        queer, incluyendo a través del + cualquier otra identidad
+        que se quede en el medio de todas ellas o en ninguna parte.</string>
+
+
+    /links blogs informacion/
+    <string name="hiperlink1"><a href="https://www.corteidh.or.cr/tablas/r24906.pdf">El amor en tiempos de cólera: Derechos LGBT en COLOMBIA</a></string>
+
+
+    <string name="pregunta">¿Cuáles son los principios de la cultura de la paz?</string>
+    <string name="masinfomasinfo">Para mas información</string>
+    <string name="culturadescrip">Estos tres principios están interrelacionados y se refuerzan mutuamente: Consentimiento de las partes. Imparcialidad. No uso de la fuerza, excepto en legítima defensa y en defensa del mandato:</string>
+
+    <!--  links  blogs-->
+
+
+    <!-- link for home text view-->
+    <string name="hyperlink"><a href="https://www.mincultura.gov.co/prensa/noticias/Paginas/Colombia-camina-hacia-la-paz,-a-través-de-la-cultura.aspx">Ministerio de cultura</a></string>
+    <!-- link for practice textview-->
+    <string name="hyperlink2"><a href="https://practice.geeksforgeeks.org/">practice.geeksforgeeks.org</a></string>
+
+
+    <!-- href tag is used to add link-->
+    <!-- link for home text view-->
+
+    <!-- link for practice textview-->
+    <string name="link3"><a href="https://practice.geeksforgeeks.org/">practice.geeksforgeeks.org</a></string>
+
+</resources>

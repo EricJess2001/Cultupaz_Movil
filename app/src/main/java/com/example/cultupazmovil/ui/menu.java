@@ -3,19 +3,74 @@ package com.example.cultupazmovil.ui;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.lifecycle.ViewModelProvider;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 import com.example.cultupazmovil.R;
+import com.example.cultupazmovil.databinding.FragmentMenuBinding;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link menu#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class menu extends Fragment {
+
+    private FragmentMenuBinding binding;
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+
+        binding = FragmentMenuBinding.inflate(inflater, container, false);
+        View view = inflater.inflate(R.layout.fragment_menu, container, false);
+
+        LinearLayout tem1 = (LinearLayout) view.findViewById(R.id.tem1);
+        tem1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Informa probando4= new Informa();
+
+                FragmentManager fragmentManager = getFragmentManager();
+
+                fragmentManager.beginTransaction()
+                        .replace(R.id.nav_host_fragment_activity_main, probando4)
+                        .commit();
+            }
+        });
+
+        return view;
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -57,10 +112,4 @@ public class menu extends Fragment {
         }
     }
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_menu, container, false);
-    }
 }

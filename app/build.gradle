@@ -6,6 +6,10 @@ android {
     namespace 'com.example.cultupazmovil'
     compileSdk 33
 
+    dataBinding {
+        enabled = true
+    }
+
     defaultConfig {
         applicationId "com.example.cultupazmovil"
         minSdk 24
@@ -26,9 +30,15 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
+    buildFeatures {
+        viewBinding true
+        compose true
+    }
 }
 
 dependencies {
+
 
     implementation 'androidx.appcompat:appcompat:1.4.1'
     implementation 'com.google.android.material:material:1.5.0'

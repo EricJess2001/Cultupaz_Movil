@@ -10,12 +10,39 @@ import android.view.ViewGroup;
 
 import com.example.cultupazmovil.R;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link menu#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class menu extends Fragment {
+
+
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_menu, container, false);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -57,10 +84,4 @@ public class menu extends Fragment {
         }
     }
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_menu, container, false);
-    }
 }

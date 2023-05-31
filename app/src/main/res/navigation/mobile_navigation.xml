@@ -3,38 +3,71 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@id/cultupaz">
+    app:startDestination="@id/menu">
 
     <fragment
         android:id="@+id/inicio_sesion"
         android:name="com.example.cultupazmovil.ui.inicio_sesion"
         android:label="fragment_inicio_sesion"
-        tools:layout="@layout/fragment_inicio_sesion" />
+        tools:layout="@layout/fragment_inicio_sesion" >
+        <action
+            android:id="@+id/action_inicio_sesion_to_cultupaz"
+            app:destination="@id/cultupaz" />
+        <action
+            android:id="@+id/action_inicio_sesion_to_registro"
+            app:destination="@id/registro" />
+    </fragment>
     <fragment
         android:id="@+id/cultupaz"
         android:name="com.example.cultupazmovil.ui.cultupaz"
         android:label="fragment_cultupaz"
-        tools:layout="@layout/fragment_cultupaz" />
+        tools:layout="@layout/fragment_cultupaz" >
+        <action
+            android:id="@+id/action_cultupaz_to_termino_condiciones"
+            app:destination="@id/termino_condiciones" />
+    </fragment>
     <fragment
         android:id="@+id/registro"
         android:name="com.example.cultupazmovil.ui.registro"
         android:label="fragment_registro"
-        tools:layout="@layout/fragment_registro" />
+        tools:layout="@layout/fragment_registro" >
+        <action
+            android:id="@+id/action_registro_to_inicio_sesion"
+            app:destination="@id/inicio_sesion" />
+    </fragment>
     <fragment
         android:id="@+id/termino_condiciones"
         android:name="com.example.cultupazmovil.ui.termino_condiciones"
         android:label="fragment_termino_condiciones"
-        tools:layout="@layout/fragment_termino_condiciones" />
+        tools:layout="@layout/fragment_termino_condiciones" >
+        <action
+            android:id="@+id/action_termino_condiciones_to_menu"
+            app:destination="@id/menu" />
+        <action
+            android:id="@+id/action_termino_condiciones_to_cultupaz"
+            app:destination="@id/cultupaz" />
+    </fragment>
     <fragment
         android:id="@+id/menu"
         android:name="com.example.cultupazmovil.ui.menu"
         android:label="fragment_menu"
-        tools:layout="@layout/fragment_menu" />
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menu_to_informa"
+            app:destination="@id/informa" />
+    </fragment>
     <fragment
         android:id="@+id/informa"
         android:name="com.example.cultupazmovil.ui.Informa"
         android:label="fragment_informa"
-        tools:layout="@layout/fragment_informa" />
+        tools:layout="@layout/fragment_informa" >
+        <action
+            android:id="@+id/action_informa_to_cultura"
+            app:destination="@id/cultura" />
+        <action
+            android:id="@+id/action_informa_to_lgtbi"
+            app:destination="@id/lgtbi" />
+    </fragment>
     <fragment
         android:id="@+id/info_web"
         android:name="com.example.cultupazmovil.ui.info_web"

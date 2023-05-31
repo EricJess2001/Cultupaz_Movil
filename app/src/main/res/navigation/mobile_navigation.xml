@@ -55,6 +55,9 @@
         <action
             android:id="@+id/action_menu_to_informa"
             app:destination="@id/informa" />
+        <action
+            android:id="@+id/action_menu_to_imagens"
+            app:destination="@id/imagens" />
     </fragment>
     <fragment
         android:id="@+id/informa"
@@ -88,4 +91,9 @@
         android:name="com.example.cultupazmovil.ui.lgtbi"
         android:label="fragment_lgtbi"
         tools:layout="@layout/fragment_lgtbi" />
+    <fragment
+        android:id="@+id/imagens"
+        android:name="com.example.cultupazmovil.ui.imagens"
+        android:label="fragment_imagens"
+        tools:layout="@layout/fragment_imagens" />
 </navigation>

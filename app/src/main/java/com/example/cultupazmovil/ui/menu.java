@@ -27,6 +27,10 @@ public class menu extends Fragment {
         View view = inflater.inflate(R.layout.fragment_menu, container, false);
 
         LinearLayout tem1 = (LinearLayout) view.findViewById(R.id.tem1);
+        LinearLayout tem2 = (LinearLayout) view.findViewById(R.id.tem2);
+
+
+
         tem1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -39,6 +43,8 @@ public class menu extends Fragment {
                         .commit();
             }
         });
+
+
 
         return view;
     }

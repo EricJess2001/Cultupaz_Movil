@@ -180,7 +180,7 @@
                                 android:layout_marginTop="10dp"
                                 android:layout_marginBottom="10dp"
                                 android:padding="3dp"
-                                android:text="Sobre nosotros"
+                                android:text="Imagenes"
                                 android:textColor="#ffff"
                                 android:textSize="20sp"
                                 android:textStyle="bold" />

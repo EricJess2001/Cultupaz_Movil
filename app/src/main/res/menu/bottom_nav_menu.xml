@@ -9,13 +9,13 @@
 
     <item
         android:id="@+id/navigation_web"
-        android:icon="@drawable/ic_home_black_24dp"
+        android:icon="@drawable/baseline_menu_book_24"
         android:title="Web"
         ></item>
 
     <item
         android:id="@+id/navigation_nosotros"
-        android:icon="@drawable/ic_home_black_24dp"
+        android:icon="@drawable/baseline_group_24"
         android:title="Nosotros"
         ></item>
 

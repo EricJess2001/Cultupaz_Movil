@@ -127,40 +127,6 @@
                         app:cardCornerRadius="15dp">
 
                         <LinearLayout
-                            android:id="@+id/tem2"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="vertical">
-
-                            <ImageView
-                                android:id="@+id/postmuro"
-                                android:layout_width="wrap_content"
-                                android:layout_height="130dp"
-                                android:scaleType="centerCrop"
-                                android:src="@drawable/mural" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center"
-                                android:layout_marginTop="10dp"
-                                android:layout_marginBottom="10dp"
-                                android:padding="3dp"
-                                android:text="Web"
-                                android:textColor="#ffff"
-                                android:textSize="20sp"
-                                android:textStyle="bold"/>
-                        </LinearLayout>
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:layout_width="180dp"
-                        android:layout_height="180dp"
-                        android:layout_margin="16dp"
-                        app:cardBackgroundColor="@color/purpledark"
-                        app:cardCornerRadius="15dp">
-
-                        <LinearLayout
                             android:id="@+id/tem3"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"

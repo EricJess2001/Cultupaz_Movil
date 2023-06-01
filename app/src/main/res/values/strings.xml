@@ -30,10 +30,7 @@
     <string name="app_nam">Dropdown</string>
     <string name="select">Select Item</string>
 
-
     <!-- lgtbiq INFORMACION-->
-
-
     <string name="titulo">LGTBIQ+ Terminología de la diversidad</string>
     <string name="titulo1">A propósito del esquema del post de mi blog
         Roles de género – Diversidad sexual, y gracias a algunas dudas
@@ -72,5 +69,9 @@
 
     <!-- link for practice textview-->
     <string name="link3"><a href="https://practice.geeksforgeeks.org/">practice.geeksforgeeks.org</a></string>
+
+
+    <!-- String Spinner-->
+
 
 </resources>

@@ -28,8 +28,23 @@ public class Informa extends Fragment {
         View view = inflater.inflate(R.layout.fragment_informa, container, false);
 
 
+        @SuppressLint({"MissingInflatedId", "LocalSuppress"})
+        ImageView  regresome = (ImageView) view.findViewById(R.id.regresome);
         ImageView imageView4 = (ImageView) view.findViewById(R.id.imageView4);
         ImageView imageView3 = (ImageView) view.findViewById(R.id.imageView3);
+
+        regresome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                menu menuss = new menu();
+
+                FragmentManager fragmentManager = getFragmentManager();
+
+                fragmentManager.beginTransaction()
+                        .replace(R.id.nav_host_fragment_activity_main, menuss)
+                        .commit();
+            }
+        });
 
 
         imageView3.setOnClickListener(new View.OnClickListener() {

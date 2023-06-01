@@ -67,25 +67,25 @@
 
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical"
                             android:clickable="true"
-                            android:onClick="navigateToAnotherFragment">
+                            android:onClick="navigateToAnotherFragment"
+                            android:orientation="vertical">
 
                             <ImageView
 
                                 android:layout_width="wrap_content"
                                 android:layout_height="130dp"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/informa" />
+                                android:src="@drawable/mochila1" />
 
                             <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_width="match_parent"
+                                android:layout_height="54dp"
                                 android:layout_gravity="center"
                                 android:layout_marginTop="10dp"
                                 android:layout_marginBottom="10dp"
                                 android:padding="2dp"
-                                android:text="Informacion"
+                                android:text="@string/titulo3"
                                 android:textColor="@color/black"
                                 android:textSize="20sp"
                                 android:textStyle="bold" />
@@ -103,16 +103,16 @@
 
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical"
                             android:clickable="true"
-                            android:onClick="navigateToAnotherFragment">
+                            android:onClick="navigateToAnotherFragment"
+                            android:orientation="vertical">
 
                             <ImageView
 
                                 android:layout_width="wrap_content"
                                 android:layout_height="130dp"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/informa" />
+                                android:src="@drawable/bolso2" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -121,7 +121,7 @@
                                 android:layout_marginTop="10dp"
                                 android:layout_marginBottom="10dp"
                                 android:padding="2dp"
-                                android:text="Informacion"
+                                android:text="@string/titulo4"
                                 android:textColor="@color/black"
                                 android:textSize="20sp"
                                 android:textStyle="bold" />
@@ -139,16 +139,16 @@
 
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical"
                             android:clickable="true"
-                            android:onClick="navigateToAnotherFragment">
+                            android:onClick="navigateToAnotherFragment"
+                            android:orientation="vertical">
 
                             <ImageView
 
                                 android:layout_width="wrap_content"
                                 android:layout_height="130dp"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/informa" />
+                                android:src="@drawable/sombrero9" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -157,7 +157,7 @@
                                 android:layout_marginTop="10dp"
                                 android:layout_marginBottom="10dp"
                                 android:padding="2dp"
-                                android:text="Informacion"
+                                android:text="@string/titulo10"
                                 android:textColor="@color/black"
                                 android:textSize="20sp"
                                 android:textStyle="bold" />
@@ -187,16 +187,16 @@
 
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical"
                             android:clickable="true"
-                            android:onClick="navigateToAnotherFragment">
+                            android:onClick="navigateToAnotherFragment"
+                            android:orientation="vertical">
 
                             <ImageView
 
                                 android:layout_width="wrap_content"
                                 android:layout_height="130dp"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/informa" />
+                                android:src="@drawable/collar3" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -205,7 +205,7 @@
                                 android:layout_marginTop="10dp"
                                 android:layout_marginBottom="10dp"
                                 android:padding="2dp"
-                                android:text="Informacion"
+                                android:text="@string/titulo5"
                                 android:textColor="@color/black"
                                 android:textSize="20sp"
                                 android:textStyle="bold" />
@@ -223,16 +223,16 @@
 
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical"
                             android:clickable="true"
-                            android:onClick="navigateToAnotherFragment">
+                            android:onClick="navigateToAnotherFragment"
+                            android:orientation="vertical">
 
                             <ImageView
 
                                 android:layout_width="wrap_content"
                                 android:layout_height="130dp"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/informa" />
+                                android:src="@drawable/manilla4" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -241,7 +241,7 @@
                                 android:layout_marginTop="10dp"
                                 android:layout_marginBottom="10dp"
                                 android:padding="2dp"
-                                android:text="Informacion"
+                                android:text="@string/titulo6"
                                 android:textColor="@color/black"
                                 android:textSize="20sp"
                                 android:textStyle="bold" />
@@ -259,16 +259,16 @@
 
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical"
                             android:clickable="true"
-                            android:onClick="navigateToAnotherFragment">
+                            android:onClick="navigateToAnotherFragment"
+                            android:orientation="vertical">
 
                             <ImageView
 
                                 android:layout_width="wrap_content"
                                 android:layout_height="130dp"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/informa" />
+                                android:src="@drawable/aretes8" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -277,7 +277,7 @@
                                 android:layout_marginTop="10dp"
                                 android:layout_marginBottom="10dp"
                                 android:padding="2dp"
-                                android:text="Informacion"
+                                android:text="@string/titulo9"
                                 android:textColor="@color/black"
                                 android:textSize="20sp"
                                 android:textStyle="bold" />
@@ -285,6 +285,7 @@
                     </androidx.cardview.widget.CardView>
                 </LinearLayout>
             </HorizontalScrollView>
+
             <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -305,25 +306,25 @@
 
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical"
                             android:clickable="true"
-                            android:onClick="navigateToAnotherFragment">
+                            android:onClick="navigateToAnotherFragment"
+                            android:orientation="vertical">
 
                             <ImageView
 
                                 android:layout_width="wrap_content"
                                 android:layout_height="130dp"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/informa" />
+                                android:src="@drawable/olla5" />
 
                             <TextView
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
                                 android:layout_marginTop="10dp"
                                 android:layout_marginBottom="10dp"
                                 android:padding="2dp"
-                                android:text="Informacion"
+                                android:text="@string/titulo7"
                                 android:textColor="@color/black"
                                 android:textSize="20sp"
                                 android:textStyle="bold" />
@@ -341,16 +342,16 @@
 
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical"
                             android:clickable="true"
-                            android:onClick="navigateToAnotherFragment">
+                            android:onClick="navigateToAnotherFragment"
+                            android:orientation="vertical">
 
                             <ImageView
 
                                 android:layout_width="wrap_content"
                                 android:layout_height="130dp"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/informa" />
+                                android:src="@drawable/cazuela6" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -359,7 +360,7 @@
                                 android:layout_marginTop="10dp"
                                 android:layout_marginBottom="10dp"
                                 android:padding="2dp"
-                                android:text="Informacion"
+                                android:text="@string/titulo8"
                                 android:textColor="@color/black"
                                 android:textSize="20sp"
                                 android:textStyle="bold" />
@@ -377,16 +378,16 @@
 
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:orientation="vertical"
                             android:clickable="true"
-                            android:onClick="navigateToAnotherFragment">
+                            android:onClick="navigateToAnotherFragment"
+                            android:orientation="vertical">
 
                             <ImageView
 
                                 android:layout_width="wrap_content"
                                 android:layout_height="130dp"
                                 android:scaleType="centerCrop"
-                                android:src="@drawable/informa" />
+                                android:src="@drawable/cucharas7" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -395,7 +396,7 @@
                                 android:layout_marginTop="10dp"
                                 android:layout_marginBottom="10dp"
                                 android:padding="2dp"
-                                android:text="Informacion"
+                                android:text="@string/titulo11"
                                 android:textColor="@color/black"
                                 android:textSize="20sp"
                                 android:textStyle="bold" />
@@ -412,7 +413,6 @@
 
 
         </LinearLayout>
-
 
 
     </ScrollView>

@@ -73,4 +73,19 @@
     <!-- link for practice textview-->
     <string name="link3"><a href="https://practice.geeksforgeeks.org/">practice.geeksforgeeks.org</a></string>
 
+    <!-- INFORMACION EN IMAGENES -->
+    <string name="titulo3">Mochila familiar</string>
+    <string name="titulo4">Bolso wayuu tejido,crochet</string>
+    <string name="titulo5">Collares mostacilla</string>
+    <string name="titulo6">Mostacilla Manilla</string>
+    <string name="titulo7">Olla Frijolera Barro </string>
+    <string name="titulo8">Cazuela de barro negro </string>
+    <string name="titulo9">Aretes en crochet</string>
+    <string name="titulo10">sombrero Nasa</string>
+    <string name="titulo11">Cuchara de madera</string>
+
+
+
+
+
 </resources>

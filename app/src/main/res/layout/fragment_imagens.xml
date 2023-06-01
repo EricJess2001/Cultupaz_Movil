@@ -7,6 +7,7 @@
     android:id="@+id/imagenesp"
     tools:context=".ui.imagens">
 
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -25,6 +26,8 @@
                 android:background="@drawable/ic_wave"
                 android:orientation="vertical">
 
+
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -36,7 +39,6 @@
                     android:textSize="30sp"
                     android:textStyle="bold" />
 
-
                 <TextView
                     android:id="@+id/description"
                     android:layout_width="309dp"
@@ -45,6 +47,8 @@
                     android:layout_marginTop="20dp"
                     android:text="is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
                     android:textColor="@color/purpledark" />
+
+
             </LinearLayout>
 
             <HorizontalScrollView
@@ -365,7 +369,6 @@
                             android:orientation="vertical">
 
                             <ImageView
-
                                 android:layout_width="wrap_content"
                                 android:layout_height="130dp"
                                 android:scaleType="centerCrop"
@@ -387,6 +390,15 @@
                 </LinearLayout>
             </HorizontalScrollView>
 
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="95dp"
@@ -395,6 +407,8 @@
 
 
         </LinearLayout>
+
+
 
 
     </ScrollView>

@@ -6,6 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".ui.registro">
 
+    <LinearLayout
+        android:layout_width="629dp"
+        android:layout_height="461dp"
+        android:background="@drawable/ic_register"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="-86dp"
+        tools:ignore="MissingConstraints" />
+
     <androidx.cardview.widget.CardView
         android:layout_width="340dp"
         android:layout_height="665dp"
@@ -44,7 +52,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="16dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/logocolor"
+                android:src="@drawable/logo"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.497"
                 app:layout_constraintStart_toStartOf="parent"
@@ -175,18 +183,23 @@
                 app:cornerRadius="10dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.502"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.956"
+                app:layout_constraintVertical_bias="0.928"
                 tools:ignore="MissingConstraints" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:background="@drawable/footer_re"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="0dp" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-
-
-
     </androidx.cardview.widget.CardView>
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

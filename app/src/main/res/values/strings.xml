@@ -92,5 +92,22 @@
     <string name="Creatividad">Sin duda alguna la creatividad es una singularidad que caracteriza a los seres humanos. Gracias al milagro cognitivo estamos ilimitadamente dotados de esta particularidad del pensamiento.</string>
     <string name="Identidad">La identidad o el self es, entonces, resultado del encuentro de estos dos aspectos: nuestras motivaciones más íntimas y más creativas, con las normas que nos han enseñado nuestros mayores.</string>
 
+    <!--  Nosotros-->
+    <string name="nosotros">   Incentivamos mediante el aplicativo web diferentes alternativas de paz,creando módulos de cultura, juegos y actividades didácticas que tiene como objetivo unir a las personas y a su ves fomentar un ambiente de paz.</string>
+
+    <string name="vision"> Fomentar la cultura de la paz dentro de los ambientes del
+    SENA si quieres hablar con nosotros ubicanos en CTPI, por
+    lo tanto para elegir, construir e integrar a nuestra vida
+    aquellos valores, conocimientos y formas de ser que nos
+    ayudan a entender actitudes, comportamientos y estilos de
+    vida propicios de las personas con dichas dificultades.</string>
+
+    <string name="mision">Atender con eficacia, responsabilidad y sentido
+    humanitario los problemas psicológicos que se presentan en
+    las diferentes áreas del bienestar y desarrollo social en
+    las que el comportamiento del individuo reviste esencial
+    importancia para la vida en sociedad, tanto en los ámbitos
+    local y regional como en el nacional.</string>
+
 
 </resources>

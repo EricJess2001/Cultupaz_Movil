@@ -96,4 +96,9 @@
         android:name="com.example.cultupazmovil.ui.imagens"
         android:label="fragment_imagens"
         tools:layout="@layout/fragment_imagens" />
+    <fragment
+        android:id="@+id/expresate"
+        android:name="com.example.cultupazmovil.ui.Expresate"
+        android:label="fragment_expresate"
+        tools:layout="@layout/fragment_expresate" />
 </navigation>

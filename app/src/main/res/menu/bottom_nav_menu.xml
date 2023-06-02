@@ -19,5 +19,11 @@
         android:title="Nosotros"
         ></item>
 
+    <item
+        android:id="@+id/expresate"
+        android:icon="@drawable/baseline_theater_comedy_24"
+        android:title="Expresate">
+    </item>
+
 
 </menu>

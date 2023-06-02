@@ -26,8 +26,6 @@
                 android:background="@drawable/ic_wave"
                 android:orientation="vertical">
 
-
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -38,6 +36,13 @@
                     android:textColor="@color/white"
                     android:textSize="30sp"
                     android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/regresomenu"
+                    android:layout_width="36dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="left"
+                    android:src="@drawable/regreso" />
 
                 <TextView
                     android:id="@+id/description"

@@ -58,7 +58,7 @@
                         android:layout_marginTop="20dp"
                         android:textColor="@color/purpledark"
                         android:layout_marginLeft="42dp"
-                        android:text="is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+                        android:text="@string/comunicacion"
                         />
 
                 </LinearLayout>
@@ -179,7 +179,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="22dp"
                     android:layout_marginTop="20dp"
-                    android:text="is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown. "
+                    android:text="@string/Creatividad"
                     android:textColor="@color/purpledark" />
 
                 <ImageView
@@ -214,7 +214,7 @@
                     android:layout_marginTop="20dp"
                     android:textColor="@color/purpledark"
                     android:layout_marginLeft="42dp"
-                    android:text="is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since."
+                    android:text="@string/Identidad"
                     />
 
             </LinearLayout>

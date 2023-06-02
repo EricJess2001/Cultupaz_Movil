@@ -60,7 +60,7 @@
             android:layout_width="342dp"
             android:layout_height="65dp"
             android:layout_gravity="center"
-            android:text="is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown. "
+            android:text="@string/Bienvenido"
             android:textColor="@color/purpledark"
             tools:layout_editor_absoluteX="11dp"
             tools:layout_editor_absoluteY="172dp" />
@@ -110,7 +110,7 @@
             <TextView
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:text="is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown. "
+                android:text="@string/Comunidad"
                 android:textColor="@color/purpledark"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.026"
@@ -120,12 +120,12 @@
 
             <ImageView
                 android:layout_width="187dp"
-                android:layout_height="142dp"
+                android:layout_height="153dp"
                 android:layout_gravity="right"
-                android:layout_marginTop="16dp"
-                android:src="@drawable/lgtb_web"
+                android:layout_marginTop="75dp"
+                android:src="@drawable/comunidad"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintHorizontal_bias="0.883"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -178,7 +178,7 @@
             <TextView
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:text="is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown. "
+                android:text="Nuestro sitio web contara con un inicio de sesion en 2 tipos de usuario, tanto como aprendiz que tendra la posibilidad de jugar, compartir pensamientos, mostrar tus propias artesanias y lo mas importante solicitar un evento y como gestor crear un evento para todos los aprendices y realizar charlas. "
                 android:textColor="@color/purpledark"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.938"
@@ -190,10 +190,10 @@
                 android:layout_width="187dp"
                 android:layout_height="142dp"
                 android:layout_gravity="right"
-                android:layout_marginTop="28dp"
+                android:layout_marginTop="32dp"
                 android:src="@drawable/web_login"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.013"
+                app:layout_constraintHorizontal_bias="0.071"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -209,7 +209,7 @@
                 android:layout_width="250dp"
                 android:layout_height="150dp"
                 android:layout_marginTop="4dp"
-                android:src="@drawable/web_lib"
+                android:src="@drawable/tegnologias"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.495"
                 app:layout_constraintStart_toStartOf="parent"
@@ -220,7 +220,7 @@
             android:layout_width="342dp"
             android:layout_height="65dp"
             android:layout_gravity="center"
-            android:text="is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown. "
+            android:text="Para crear este sitio web se utilizaron las siguientes tecnologias: Visual Studio Code,React, MySql, Xampp, figma, Nodejs,Android Studio entre otros. "
             android:textColor="@color/purpledark"
             tools:layout_editor_absoluteX="11dp"
             tools:layout_editor_absoluteY="172dp" />

@@ -7,7 +7,7 @@ buildscript {
     }
     dependencies {
         // Add the dependency for Google Services
-        classpath 'com.google.gms:google-services:4.3.10'
+        classpath 'com.google.gms:google-services:4.3.15'
     }
 }
 

@@ -1,49 +1,14 @@
 package com.example.cultupazmovil.ui;
 
 import android.os.Bundle;
-
-<<<<<<< HEAD
-=======
-import androidx.annotation.NonNull;
->>>>>>> 85d436aae929167a1358571b99051f1c3ed522bb
-import androidx.fragment.app.DialogFragment;
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-<<<<<<< HEAD
-
-import com.example.cultupazmovil.R;
-import com.example.cultupazmovil.databinding.FragmentExpresateBinding;
-
-public class Expresate extends DialogFragment {
-
-    private FragmentExpresateBinding binding;
-
-
-    Button button;
-    EditText temaha, expression;
-
-
-    @Override
-
-    public void onCreate(Bundle savedInstanceState) { super.onCreate(savedInstanceState);}
-
-
-
-        @Override
-        public View onCreateView (LayoutInflater inflater, ViewGroup container,
-                Bundle savedInstanceState){
-            // Inflate the layout for this fragment
-            return inflater.inflate(R.layout.fragment_expresate, container, false);
-        }
-    }
-=======
 import android.widget.Toast;
-
+import androidx.annotation.NonNull;
+import androidx.fragment.app.DialogFragment;
 import com.example.cultupazmovil.R;
 import com.example.cultupazmovil.databinding.FragmentInformaBinding;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -51,7 +16,6 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreSettings;
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -91,11 +55,11 @@ public class Expresate extends DialogFragment {
                 }else{
                     postData(title,description);
                 }
-
-
             }
         });
+
         return view;
+
     }
 
     private void postData(String title, String description) {
@@ -103,7 +67,7 @@ public class Expresate extends DialogFragment {
         map.put("titulo", title);
         map.put("Expresion", description);
 
-        mfirestore.collection("pet").add(map).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+        mfirestore.collection("put").add(map).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
             @Override
             public void onSuccess(@NonNull DocumentReference documentReference) {
 
@@ -120,4 +84,4 @@ public class Expresate extends DialogFragment {
     }
 
 }
->>>>>>> 85d436aae929167a1358571b99051f1c3ed522bb
+

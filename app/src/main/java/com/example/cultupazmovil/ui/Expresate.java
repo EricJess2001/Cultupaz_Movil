@@ -23,7 +23,7 @@ import java.util.Map;
 public class Expresate extends DialogFragment {
 
     Button buttonenviar;
-    EditText temaha, expression;
+    EditText tema, expresion;
     private FirebaseFirestore mfirestore;
 
     private FragmentInformaBinding binding;
@@ -38,16 +38,16 @@ public class Expresate extends DialogFragment {
         // Inflate the layout for this fragment
         mfirestore = FirebaseFirestore.getInstance();
 
-        temaha = view.findViewById(R.id.temaha);
-        expression = view.findViewById(R.id.expression);
+        tema = view.findViewById(R.id.temaha);
+        expresion = view.findViewById(R.id.expression);
 
         buttonenviar = view.findViewById(R.id.buttonenviar);
 
         buttonenviar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String title = temaha.getText().toString().trim();
-                String description = expression.getText().toString().trim();
+                String title = tema.getText().toString().trim();
+                String description = expresion.getText().toString().trim();
 
 
                 if (title.isEmpty() && description.isEmpty()){
@@ -67,12 +67,13 @@ public class Expresate extends DialogFragment {
         map.put("titulo", title);
         map.put("Expresion", description);
 
-        mfirestore.collection("put").add(map).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+        mfirestore.collection("expresiones").add(map).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
             @Override
             public void onSuccess(@NonNull DocumentReference documentReference) {
 
                 Toast.makeText(getContext(),"Creado exitosamente", Toast.LENGTH_SHORT).show();
-              getDialog().dismiss();
+               tema.setText("");
+               expresion.setText("");
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override

@@ -1,5 +1,20 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    repositories {
+        // Repositories for the buildscript dependencies
+        google()
+        jcenter()
+    }
+    dependencies {
+        // Add the dependency for Google Services
+        classpath 'com.google.gms:google-services:4.3.10'
+    }
+}
+
 plugins {
     id 'com.android.application' version '8.0.2' apply false
     id 'com.android.library' version '8.0.2' apply false
 }
+
+// Rest of the build.gradle file...
+

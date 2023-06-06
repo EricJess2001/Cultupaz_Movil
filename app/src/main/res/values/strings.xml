@@ -74,6 +74,7 @@
     <!-- String Spinner-->
 
     <!-- INFORMACION EN IMAGENES -->
+    <string name="influye">las artesanías promueven la paz y la cultura al fomentar la comprensión entre diferentes culturas, preservar tradiciones y transmitir mensajes de armonía. Su belleza y significado generan respeto mutuo y contribuyen a un ambiente pacífico..</string>
     <string name="titulo3">Mochila familiar</string>
     <string name="titulo4">Bolso wayuu </string>
     <string name="titulo5">Collares mostacilla</string>
@@ -113,7 +114,7 @@
     <string name="Bienvenido">Bienvenido a la previzualizacion de nuestro sitio web, en el se aplicaran diverson modulos en los cuales el usuario podra interactuar de forma fluida y asi conocer mas sobre cultura y paz en direntes aspectos.</string>
     <string name="Comunidad">La comunidad es clave para construir la paz. Esto implica justicia, igualdad, respeto mutuo y colaboración. Para lograrlo es importante promover el diálogo, la inclusión y abordar las causas de los conflictos Además, la comunidad puede respaldar la reconciliación, el respeto a los derechos humano y participar en la resolución pacífica de disputas Todos los miembros de la comunidad tienen la responsabilidad de contribuir un entorno pacífico y armonioso. </string>
     <string name="sitioweb">Nuestro sitio web contara con un inicio de sesion en 2 tipos de usuario, tanto como aprendiz que tendra la posibilidad de jugar compartir pensamientos, mostrar tus propias artesanias y lo mas importante solicitar un evento y como gestor crear un evento para todos los aprendices y realizar charlas.</string>
-    <string name="creacion">Para crear este sitio web se utilizaron las siguientes tecnologias: Visual Studio Code, React, MySql, Xampp, figma, Nodejs, Android Studio entre otros.</string>
+    <string name="creacion">Para crear este sitio web se utilizaron las siguientes tecnologias: Visual Studio Code,javascript,Nodejs, React, MySql, Xampp, figma,Trello  Android Studio entre otros.</string>
 
 
 </resources>

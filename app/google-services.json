@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "89844914888",
+    "project_id": "cultupaz-ba6f2",
+    "storage_bucket": "cultupaz-ba6f2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:89844914888:android:d105fb74ffacf77b3023fd",
+        "android_client_info": {
+          "package_name": "com.example.cultupazmovil"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "89844914888-05fi2kcglq7h9ar6mefv74g9h9i9p3ol.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSeWWSurr19a1cuNFLIaIVxSHKszt4wI0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "89844914888-05fi2kcglq7h9ar6mefv74g9h9i9p3ol.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

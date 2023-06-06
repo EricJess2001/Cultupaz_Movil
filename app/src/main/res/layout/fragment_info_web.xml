@@ -209,7 +209,7 @@
                 android:layout_width="250dp"
                 android:layout_height="150dp"
                 android:layout_marginTop="4dp"
-                android:src="@drawable/tegnologias"
+                android:src="@drawable/tecnologia"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.495"
                 app:layout_constraintStart_toStartOf="parent"

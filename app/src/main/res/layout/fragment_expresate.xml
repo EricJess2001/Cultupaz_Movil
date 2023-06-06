@@ -67,7 +67,7 @@
                     android:backgroundTint="@color/purpledark"
                     android:text="Subir"
                     android:textColor="@color/white"
-                    android:textSize="20sp"
+                    android:textSize="15sp"
                     app:cornerRadius="10dp"/>
 
 

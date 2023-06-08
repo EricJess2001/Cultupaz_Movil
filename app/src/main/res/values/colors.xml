@@ -9,10 +9,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="gris">#999999</color>
     <color name="rojo">#FF0000</color>
-
-
     <color name="purpledark">#00324D</color>
     <color name="btncolor">#0b2c4a</color>
-
-
 </resources>

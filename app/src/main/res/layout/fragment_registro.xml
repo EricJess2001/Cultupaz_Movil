@@ -193,7 +193,6 @@
                 android:layout_width="match_parent"
                 android:orientation="horizontal"
                 android:layout_height="65dp"
-                android:background="@drawable/footer_re"
                 app:layout_constraintBottom_toBottomOf="parent"
                 tools:ignore="MissingConstraints"
                 tools:layout_editor_absoluteX="0dp" />

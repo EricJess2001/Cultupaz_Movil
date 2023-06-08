@@ -120,4 +120,8 @@
     <string name="creacion">Para crear este sitio web se utilizaron las siguientes tecnologias: Visual Studio Code,javascript,Nodejs, React, MySql, Xampp, figma,Trello  Android Studio entre otros.</string>
 
 
+    <!-- Expresarte -->
+    <string name="Expresarte">
+La libertad de expresión fomenta el intercambio de ideas para la paz y el desarrollo cultural. Ejercerla de manera responsable promueve un ambiente respetuoso y enriquecedor que valora la diversidad y el diálogo constructivo.</string>
+
 </resources>

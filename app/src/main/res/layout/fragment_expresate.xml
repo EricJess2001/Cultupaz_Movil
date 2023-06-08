@@ -120,13 +120,13 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:layout_width="227dp"
-                    android:layout_height="137dp"
-                    android:layout_marginTop="36dp"
-                    android:text="@string/Creatividad"
+                    android:layout_width="232dp"
+                    android:layout_height="152dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/Expresarte"
                     android:textColor="@color/purpledark"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.913"
+                    app:layout_constraintHorizontal_bias="0.858"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:ignore="MissingConstraints" />

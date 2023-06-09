@@ -204,6 +204,7 @@
                 android:layout_height="56dp"
                 android:background="@drawable/spinner_border"
                 android:gravity="left"
+
                 android:orientation="horizontal"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

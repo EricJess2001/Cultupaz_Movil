@@ -132,9 +132,9 @@
     <string name="Comunidad">La comunidad es clave para construir la paz. Esto implica justicia, igualdad, respeto mutuo y colaboración. Para lograrlo es importante promover el diálogo, la inclusión y abordar las causas de los conflictos Además, la comunidad puede respaldar la reconciliación, el respeto a los derechos humano y participar en la resolución pacífica de disputas Todos los miembros de la comunidad tienen la responsabilidad de contribuir un entorno pacífico y armonioso. </string>
     <string name="sitioweb">Nuestro sitio web contara con un inicio de sesion en 2 tipos de usuario, tanto como aprendiz que tendra la posibilidad de jugar compartir pensamientos, mostrar tus propias artesanias y lo mas importante solicitar un evento y como gestor crear un evento para todos los aprendices y realizar charlas.</string>
     <string name="creacion">Para crear este sitio web se utilizaron las siguientes tecnologias: Visual Studio Code,javascript,Nodejs, React, MySql, Xampp, figma,Trello  Android Studio entre otros.</string>
+    <string name="libertad">La libre expresión, la igualdad de género y los derechos humanos son pilares esenciales para construir una sociedad justa y libre. Estos valores promueven la diversidad de opiniones, la equidad entre hombres y mujeres, y el respeto y protección de los derechos inherentes a todas las personas. Defendámoslos en nuestro muro y trabajemos juntos por un mundo más inclusivo y humano.</string>
 
-
-
+    <string name="juegos">En este módulo encontrarás dos juegos para disfrutar: el primero trata sobre tus conocimientos acerca de la paz; el segundo es un juego de encontrar parejas. ¡Diviértete mientras participas y disfrutas de estos entretenidos desafíos!</string>
 
     <!-- Expresarte -->
     <string name="Expresarte">

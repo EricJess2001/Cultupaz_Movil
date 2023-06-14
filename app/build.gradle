@@ -56,11 +56,10 @@ dependencies {
     implementation 'com.google.firebase:firebase-firestore:24.6.1'
 
 
-<<<<<<< HEAD
-=======
+
     implementation 'com.squareup.okhttp3:okhttp:3.14.9'
     implementation 'com.squareup.okhttp3:okhttp:4.9.3'
->>>>>>> 090814eec83ef05d18dc7a70e753e8058da1ab56
+
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
     implementation 'com.google.code.gson:gson:2.9.0'

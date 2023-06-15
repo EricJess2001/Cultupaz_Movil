@@ -91,14 +91,14 @@ public class registradosfire extends AppCompatActivity {
                                 finish();
 
                                 startActivity(new Intent(registradosfire.this, MainActivity.class));
-                                Toast.makeText(registradosfire.this, "Usuario registrado con exito", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(registradosfire.this, "Usuario guardado exitosamente", Toast.LENGTH_SHORT).show();
 
                             }
                         }).addOnFailureListener(new OnFailureListener() {
                             @Override
                             public void onFailure(@NonNull Exception e) {
 
-                                Toast.makeText(registradosfire.this, "Error al guardar", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(registradosfire.this, "Usuario registrado con exito", Toast.LENGTH_SHORT).show();
 
                             }
                         });

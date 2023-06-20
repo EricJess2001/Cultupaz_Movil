@@ -101,7 +101,7 @@ public class registro extends AppCompatActivity {
                 RequestBody requestBody = RequestBody.create(MediaType.parse("application/json"), jsonBody);
 // Crear la solicitud POST a la URL de Vercel
                 Request request = new Request.Builder()
-                        .url("https://localhost:7000/registroUsuarios")
+                        .url("http://localhost:7000/registroUsuarios")
                         .post(requestBody)
                         .build();
 // Crear el cliente HTTP

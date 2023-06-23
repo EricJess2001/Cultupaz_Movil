@@ -125,7 +125,7 @@
 
     <string name="comunicacion">Transmitimos un mensaje no solo a través de lo qué decimos, sino de cómo lo decimos, ya sea de forma verbal o escrita.</string>
     <string name="Creatividad">Sin duda alguna la creatividad es una singularidad que caracteriza a los seres humanos. Gracias al milagro cognitivo estamos ilimitadamente dotados de esta particularidad del pensamiento.</string>
-    <string name="Identidad">La identidad o el self es, entonces, resultado del encuentro de estos dos aspectos: nuestras motivaciones más íntimas y más creativas, con las normas que nos han enseñado nuestros mayores.</string>
+    <string name="Identidad">La identidad o el self es, entonces, el  resultado del encuentro de estos dos aspectos: nuestras motivaciones más íntimas y más creativas, con las normas que nos han enseñado nuestros mayores.</string>
 
     <!-- INFORMACION DE LA WEB -->
     <string name="Bienvenido">Bienvenido a la previzualizacion de nuestro sitio web, en el se aplicaran diversos modulos en los cuales el usuario podra interactuar de forma fluida y asi conocer mas sobre cultura y paz en direntes aspectos.</string>
@@ -137,7 +137,6 @@
     <string name="juegos">En este módulo encontrarás dos juegos para disfrutar: el primero trata sobre tus conocimientos acerca de la paz; el segundo es un juego de encontrar parejas. ¡Diviértete mientras participas y disfrutas de estos entretenidos desafíos!</string>
 
     <!-- Expresarte -->
-    <string name="Expresarte">
-La libertad de expresión fomenta el intercambio de ideas para la paz y el desarrollo cultural. Ejercerla de manera responsable promueve un ambiente respetuoso y enriquecedor que valora la diversidad y el diálogo constructivo.</string>
+    <string name="Expresarte">La libertad de expresión fomenta el intercambio de ideas para la paz y el desarrollo cultural. Ejercerla de manera responsable promueve un ambiente respetuoso y enriquecedor que valora la diversidad y el diálogo constructivo.</string>
 
 </resources>

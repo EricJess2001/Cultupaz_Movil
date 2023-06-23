@@ -57,32 +57,37 @@
 
             <EditText
                 android:id="@+id/username"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
+                android:layout_width="309dp"
+                android:layout_height="51dp"
+                android:layout_marginBottom="256dp"
+                android:background="@drawable/custom_text"
+                android:gravity="left"
                 android:hint="Correo"
                 android:inputType="textEmailAddress"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:textColorHighlight="@color/cardview_dark_background"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.476"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.472"
                 tools:ignore="MissingConstraints" />
+
 
             <EditText
                 android:id="@+id/contraseña"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
+                android:layout_width="309dp"
+                android:layout_height="51dp"
+                android:layout_marginBottom="196dp"
+                android:background="@drawable/custom_text"
+                android:gravity="left"
                 android:hint="Contrseña"
                 android:inputType="textPassword"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:textColorHighlight="@color/cardview_dark_background"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.476"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.606"
                 tools:ignore="MissingConstraints" />
 
             <TextView

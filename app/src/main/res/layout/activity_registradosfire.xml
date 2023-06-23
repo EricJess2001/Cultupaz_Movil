@@ -23,19 +23,19 @@
                 android:layout_width="100dp"
                 android:layout_height="70dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="16dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/logo"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.051" />
 
             <EditText
                 android:id="@+id/nombre"
                 android:layout_width="309dp"
                 android:layout_height="51dp"
-                android:layout_marginBottom="632dp"
+                android:layout_marginBottom="656dp"
                 android:background="@drawable/custom_text"
                 android:gravity="left"
                 android:hint="Nombre"
@@ -44,14 +44,14 @@
                 android:textColorHighlight="@color/cardview_dark_background"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.477"
+                app:layout_constraintHorizontal_bias="0.473"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <EditText
                 android:id="@+id/apellido"
                 android:layout_width="309dp"
                 android:layout_height="51dp"
-                android:layout_marginBottom="568dp"
+                android:layout_marginBottom="592dp"
                 android:background="@drawable/custom_text"
                 android:gravity="left"
                 android:hint="Apellido"
@@ -60,14 +60,14 @@
                 android:textColorHighlight="@color/cardview_dark_background"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.458"
+                app:layout_constraintHorizontal_bias="0.462"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <EditText
                 android:id="@+id/telefono"
                 android:layout_width="310dp"
                 android:layout_height="51dp"
-                android:layout_marginBottom="504dp"
+                android:layout_marginBottom="532dp"
                 android:background="@drawable/custom_text"
                 android:gravity="left"
                 android:hint="Telefono"
@@ -77,14 +77,13 @@
                 android:textColorHighlight="@color/cardview_dark_background"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.462"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <EditText
                 android:id="@+id/Numeroiden"
                 android:layout_width="310dp"
                 android:layout_height="51dp"
-                android:layout_marginBottom="444dp"
+                android:layout_marginBottom="468dp"
                 android:background="@drawable/custom_text"
                 android:gravity="left"
                 android:hint="Numero de identificacion"
@@ -93,14 +92,14 @@
                 android:textColorHighlight="@color/cardview_dark_background"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.462"
+                app:layout_constraintHorizontal_bias="0.467"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <EditText
                 android:id="@+id/correo"
                 android:layout_width="310dp"
                 android:layout_height="51dp"
-                android:layout_marginBottom="384dp"
+                android:layout_marginBottom="400dp"
                 android:background="@drawable/custom_text"
                 android:gravity="left"
                 android:hint="Correo Electronico"
@@ -110,14 +109,13 @@
                 android:textColorHighlight="@color/cardview_dark_background"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.472"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <EditText
                 android:id="@+id/contraseña"
                 android:layout_width="310dp"
                 android:layout_height="51dp"
-                android:layout_marginBottom="324dp"
+                android:layout_marginBottom="336dp"
                 android:background="@drawable/custom_text"
                 android:gravity="left"
                 android:hint="Contraseña"
@@ -127,11 +125,12 @@
                 android:textColorHighlight="@color/cardview_dark_background"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.472"
+                app:layout_constraintHorizontal_bias="0.467"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <LinearLayout
 
+                android:id="@+id/linearLayout"
                 android:layout_width="310dp"
                 android:layout_height="51dp"
                 android:layout_marginTop="-320dp"
@@ -157,6 +156,7 @@
 
             <LinearLayout
 
+                android:id="@+id/linearLayout2"
                 android:layout_width="310dp"
                 android:layout_height="51dp"
                 android:background="@drawable/spinner_border"
@@ -183,7 +183,7 @@
                 android:id="@+id/usuario"
                 android:layout_width="310dp"
                 android:layout_height="51dp"
-                android:layout_marginBottom="264dp"
+                android:layout_marginBottom="276dp"
                 android:background="@drawable/custom_text"
                 android:gravity="left"
                 android:hint="Usuario"
@@ -192,7 +192,6 @@
                 android:textColorHighlight="@color/cardview_dark_background"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.472"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <Button

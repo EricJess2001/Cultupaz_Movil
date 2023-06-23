@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -13,28 +13,34 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.CultupazMovil"
-        tools:targetApi="31"
-        android:usesCleartextTraffic="true">
-
-        <activity android:name=".ui.cultupaz"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".ui.registradosfire"
+            android:exported="false" />
+        <activity
+            android:name=".ui.cultupaz"
             android:exported="false"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
             android:exported="false"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".ui.termino_condiciones"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.termino_condiciones"
             android:exported="false"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".ui.registro"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.registro"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".ui.inicio_sesion"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
     </application>

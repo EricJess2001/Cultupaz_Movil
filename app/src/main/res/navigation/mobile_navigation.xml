@@ -101,4 +101,54 @@
         android:name="com.example.cultupazmovil.ui.Expresate"
         android:label="fragment_expresate"
         tools:layout="@layout/fragment_expresate" />
+
+    <fragment
+        android:id="@+id/login_admin"
+        android:name="com.example.cultupazmovil.ui.inicio_Admin"
+        android:label="fragment_login"
+        tools:layout="@layout/activity_inicio_admin"
+        >
+        <action
+            android:id="@+id/action_login_admin_to_inicio_admin"
+            app:destination="@id/inicio_admin" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/inicio_admin"
+        android:name="com.example.cultupazmovil.ui.inicioAdmin"
+        android:label="fragment_inicioAdmin"
+        tools:layout="@layout/fragment_inicio_admin"
+        >
+        <action
+            android:id="@+id/action_inicio_admin_to_peticiones"
+            app:destination="@id/peticiones" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/Roles"
+        android:name="com.example.cultupazmovil.ui.Roles"
+        android:label="fragment_Roles"
+        tools:layout="@layout/fragment_roles"
+        >
+        <action
+            android:id="@+id/action_Roles_to_inicio_sesion"
+            app:destination="@id/inicio_sesion" />
+        <action
+            android:id="@+id/action_Roles_to_login_admin"
+            app:destination="@id/login_admin" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/peticiones"
+        android:name="com.example.cultupazmovil.ui.Peticiones"
+        android:label="fragment_Peticiones"
+        tools:layout="@layout/fragment_peticiones"
+        ></fragment>
+
+
+
+
+
+
 </navigation>

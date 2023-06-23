@@ -40,6 +40,13 @@ public class Roles extends AppCompatActivity {
 
         admin = findViewById(R.id.button);
 
+        admin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent iraprendiz = new Intent(Roles.this,inicio_Admin.class);
+                startActivity(iraprendiz);
+            }
+        });
 
 
 

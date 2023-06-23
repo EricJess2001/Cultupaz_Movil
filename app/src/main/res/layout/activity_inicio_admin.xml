@@ -55,10 +55,10 @@
 
 
             <EditText
-                android:id="@+id/usernameadmin"
+                android:id="@+id/username"
                 android:layout_width="309dp"
                 android:layout_height="51dp"
-                android:layout_marginBottom="256dp"
+                android:layout_marginBottom="244dp"
                 android:background="@drawable/custom_text"
                 android:gravity="left"
                 android:hint="Correo"
@@ -71,12 +71,11 @@
                 app:layout_constraintStart_toStartOf="parent"
                 tools:ignore="MissingConstraints" />
 
-
             <EditText
-                android:id="@+id/contraseñaadmin"
+                android:id="@+id/contraseña"
                 android:layout_width="309dp"
                 android:layout_height="51dp"
-                android:layout_marginBottom="196dp"
+                android:layout_marginBottom="176dp"
                 android:background="@drawable/custom_text"
                 android:gravity="left"
                 android:hint="Contrseña"
@@ -89,13 +88,11 @@
                 app:layout_constraintStart_toStartOf="parent"
                 tools:ignore="MissingConstraints" />
 
-
-
             <Button
-                android:id="@+id/loginButtonadmin"
+                android:id="@+id/loginButton"
                 android:layout_width="190dp"
                 android:layout_height="60dp"
-                android:layout_marginBottom="56dp"
+                android:layout_marginBottom="88dp"
                 android:backgroundTint="@color/purpledark"
                 android:text="Login"
                 android:textColor="@color/white"

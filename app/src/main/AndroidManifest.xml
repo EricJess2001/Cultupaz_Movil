@@ -40,12 +40,9 @@
             android:name=".ui.registro"
             android:exported="false"
             android:screenOrientation="portrait" />
+
         <activity
             android:name=".ui.inicio_sesion"
-            android:exported="false"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".ui.Roles"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

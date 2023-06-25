@@ -113,7 +113,7 @@
                                 android:layout_marginTop="10dp"
                                 android:layout_marginBottom="10dp"
                                 android:padding="2dp"
-                                android:text="Informacion"
+                                android:text="Información"
                                 android:textColor="#ffff"
                                 android:textSize="20sp"
                                 android:textStyle="bold" />

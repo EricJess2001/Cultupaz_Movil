@@ -74,7 +74,7 @@
     <!-- String Spinner-->
 
     <string-array name="documento_array">
-        <item>Cedula</item>
+        <item>Cédula</item>
         <item>Tarjeta Identidad</item>
     </string-array>
 

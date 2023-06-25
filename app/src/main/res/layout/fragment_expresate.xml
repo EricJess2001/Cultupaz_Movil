@@ -51,7 +51,7 @@
                                     android:id="@+id/temaha"
                                     android:layout_width="match_parent"
                                     android:layout_height="51dp"
-                                    android:hint="De qué quieres hablar?"
+                                    android:hint="¿De qué quieres hablar?"
                                     android:maxLength="30"
                                     app:layout_constraintBottom_toTopOf="@+id/expression"
                                     app:layout_constraintEnd_toEndOf="parent"

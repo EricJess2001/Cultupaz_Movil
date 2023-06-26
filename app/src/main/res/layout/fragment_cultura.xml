@@ -72,8 +72,8 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="396dp"
-            android:layout_height="266dp"
+            android:layout_width="391dp"
+            android:layout_height="234dp"
             android:layout_gravity="center"
             android:src="@drawable/cultupaz"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -96,18 +96,26 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+<<<<<<< HEAD
             app:layout_constraintVertical_bias="0.741" />
+=======
+            app:layout_constraintVertical_bias="0.853" />
+>>>>>>> 36d9a2e497f6aa8cb208c8d80320652ed1bc5b2b
 
         <TextView
             android:id="@+id/textView8"
             android:layout_width="337dp"
             android:layout_height="37dp"
-            android:layout_marginTop="956dp"
+            android:layout_marginTop="716dp"
             android:text="@string/hyperlink"
             android:textSize="19sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+<<<<<<< HEAD
             app:layout_constraintHorizontal_bias="0.337"
+=======
+            app:layout_constraintHorizontal_bias="0.067"
+>>>>>>> 36d9a2e497f6aa8cb208c8d80320652ed1bc5b2b
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0" />

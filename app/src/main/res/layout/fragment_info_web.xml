@@ -199,8 +199,6 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
 
-
-
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView
@@ -340,6 +338,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="352dp"
                 android:layout_height="96dp"
+                android:layout_gravity="center"
                 android:layout_margin="20dp"
                 android:orientation="horizontal">
 
@@ -350,9 +349,9 @@
                     android:layout_gravity="center"
                     android:text="Para crear este sitio web se utilizaron las siguientes tecnologias: Visual Studio Code,React, MySql, Xampp, figma, Nodejs,Android Studio entre otros. "
                     android:textColor="@color/purpledark"
+                    app:layout_constraintEnd_toEndOf="parent"
                     tools:ignore="MissingConstraints"
-                    tools:layout_editor_absoluteX="1dp"
-                    tools:layout_editor_absoluteY="28dp" />
+                    tools:layout_editor_absoluteY="27dp" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <LinearLayout

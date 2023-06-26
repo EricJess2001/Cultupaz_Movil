@@ -50,11 +50,16 @@
 
     /links blogs informacion/
     <string name="hiperlink1"><a href="https://www.corteidh.or.cr/tablas/r24906.pdf">El amor en tiempos de cólera: Derechos LGBT en COLOMBIA</a></string>
+    ¿En qué consiste la política de "Paz Total" del presidente Gustavo Petro?
+
+    <string name="hiperlink"><a href="https://www.corteidh.or.cr/tablas/r24906.pdf">El amor en tiempos de cólera: Derechos LGBT en COLOMBIA</a></string>
+
+
 
 
     <string name="pregunta">¿Cuáles son los principios de la cultura de la paz?</string>
     <string name="masinfomasinfo">Para mas información</string>
-    <string name="culturadescrip">Estos tres principios están interrelacionados y se refuerzan mutuamente: Consentimiento de las partes. Imparcialidad. No uso de la fuerza, excepto en legítima defensa y en defensa del mandato:</string>
+    <string name="culturadescrip">Estos tres principios están so de la fuerza, excepto en legítima defensa y en defensa del mandato:</string>
 
     <!--  links  blogs-->
 

@@ -51,6 +51,8 @@
     /links blogs informacion/
     <string name="hiperlink1"><a href="https://www.corteidh.or.cr/tablas/r24906.pdf">El amor en tiempos de cólera: Derechos LGBT en COLOMBIA</a></string>
 
+    <string name="hiperlink2"><a href="https://colombiaartesanal.com.co/rutas/cauca/">El amor en tiempos de cólera: Derechos LGBT en COLOMBIA</a></string>
+
 
     <string name="pregunta">¿Cuáles son los principios de la cultura de la paz?</string>
     <string name="masinfomasinfo">Para mas información</string>

@@ -26,23 +26,23 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+
+
+
+
         <TextView
             android:id="@+id/textView2"
-            android:layout_width="359dp"
-            android:layout_height="171dp"
+            android:layout_width="382dp"
+            android:layout_height="169dp"
             android:text="@string/culturadescrip"
             android:textColor="@color/black"
             android:textSize="19sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.48"
+            app:layout_constraintHorizontal_bias="0.586"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-<<<<<<< HEAD
-            app:layout_constraintVertical_bias="0.224"/>
-=======
-            app:layout_constraintVertical_bias="0.211" />
->>>>>>> 1ff0657fc39972f3dfdc9918c7285253b3e9dc03
+            app:layout_constraintVertical_bias="0.226" />
 
         <TextView
             android:id="@+id/textView4"
@@ -74,6 +74,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.043" />
 
+
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="396dp"
@@ -81,12 +82,11 @@
             android:layout_gravity="center"
             android:src="@drawable/cultupaz"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.333"
+            app:layout_constraintHorizontal_bias="0.466"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.475" />
-
+            app:layout_constraintVertical_bias="0.54" />
 
         <TextView
             android:id="@+id/textView5"
@@ -100,18 +100,18 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.741" />
+            app:layout_constraintVertical_bias="0.907" />
 
         <TextView
             android:id="@+id/textView8"
             android:layout_width="337dp"
             android:layout_height="37dp"
-            android:layout_marginTop="956dp"
+            android:layout_marginTop="716dp"
             android:text="@string/hyperlink"
             android:textSize="19sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.337"
+            app:layout_constraintHorizontal_bias="0.216"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0" />

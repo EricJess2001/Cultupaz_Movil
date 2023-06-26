@@ -1,6 +1,8 @@
 package com.example.cultupazmovil.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -10,26 +12,32 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
+
 import com.example.cultupazmovil.R;
+
 import java.io.IOException;
+
+import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.RequestBody;
-import okhttp3.Call;
 import okhttp3.Response;
 
 public class registro extends AppCompatActivity {
 
     ImageView regreso;
 
-    EditText reconfirmarcon, renombre, reapellido,
-            reNumeroiden, reemail, retelefono, reusuario;
+    EditText contraseña, renombre, reapellido,
+            reNumeroiden, reemail, retelefono, reusuario, confcontraseña;
     Spinner spinner_documento, spinner_genero;
+
+    String idTipo, estadoUsuario;
 
     Button registrarse;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,7 +45,10 @@ public class registro extends AppCompatActivity {
 
         regreso = findViewById(R.id.regreso);
 
-        reconfirmarcon = findViewById(R.id.contraseña);
+        idTipo = "1";
+        estadoUsuario = "1";
+        contraseña = findViewById(R.id.contraseña);
+        confcontraseña = findViewById(R.id.confirmarcontraseña);
         renombre = findViewById(R.id.nombre);
         reapellido = findViewById(R.id.apellido);
         reNumeroiden = findViewById(R.id.Numeroiden);
@@ -48,7 +59,7 @@ public class registro extends AppCompatActivity {
         spinner_genero = findViewById(R.id.spinner_generoo);
         reusuario = findViewById(R.id.usuario);
 
-// Configurar los adaptadores para los spinners
+        // Configurar los adaptadores para los spinners
         ArrayAdapter<CharSequence> tipoAdapter = ArrayAdapter.createFromResource(this, R.array.documento_array, android.R.layout.simple_spinner_item);
         tipoAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner_documento.setAdapter(tipoAdapter);
@@ -57,12 +68,11 @@ public class registro extends AppCompatActivity {
         generoAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner_genero.setAdapter(generoAdapter);
         registrarse.setOnClickListener(new View.OnClickListener() {
-
-
             @Override
             public void onClick(View view) {
-// Obtener los datos ingresados por el usuario
-                String confirPassw = reconfirmarcon.getText().toString();
+                // Obtener los datos ingresados por el usuario
+                String confirPassw = confcontraseña.getText().toString();
+                String passw = contraseña.getText().toString();
                 String nombres = renombre.getText().toString();
                 String apellidos = reapellido.getText().toString();
                 String tipoDocumento = spinner_documento.getSelectedItem().toString();
@@ -72,45 +82,46 @@ public class registro extends AppCompatActivity {
                 String telefono = retelefono.getText().toString();
                 String usuario = reusuario.getText().toString();
 
-// Boton de regreso al login
+                // Boton de regreso al login
+                // ...
 
-                Intent regreso=new Intent(registro.this,inicio_sesion.class);
-                startActivity(regreso);
-
-// Verificar si el correo ingresado es válido
+                // Verificar si el correo ingresado es válido
                 if (!isValidEmail(correo)) {
                     Toast.makeText(registro.this, "Correo inválido", Toast.LENGTH_SHORT).show();
                     return;
                 }
-// Verificar la longitud mínima de la contraseña y su formato
-                if (confirPassw.length() < 8 || !isValidPassword(confirPassw)) {
-                    Toast.makeText(registro.this, "La contraseña debe tener al menos 8 caracteres y contener una combinación de letras, números y caracteres especiales", Toast.LENGTH_SHORT).show();
-                    return;
-                }
-// Crear el objeto JSON con los datos del usuario
+
+                // Crear el objeto JSON con los datos del usuario
                 String jsonBody = "{\"confirPassw\":\"" + confirPassw + "\","
+                        + "\"passw\":\"" + passw + "\","
                         + "\"nombres\":\"" + nombres + "\","
                         + "\"apellidos\":\"" + apellidos + "\","
                         + "\"tipoDocumento\":\"" + tipoDocumento + "\","
                         + "\"numeroDocumento\":\"" + numeroDocumento + "\","
                         + "\"correo\":\"" + correo + "\","
+                        + "\"idTipo\":\"" + idTipo + "\","
                         + "\"telefono\":\"" + telefono + "\","
                         + "\"usuario\":\"" + usuario + "\","
+                        + "\"estadoUsuario\":\"" + estadoUsuario + "\","
                         + "\"genero\":\"" + genero + "\"}";
-// Crear el cuerpo de la solicitud POST como JSON
+
+                // Crear el cuerpo de la solicitud POST como JSON
                 RequestBody requestBody = RequestBody.create(MediaType.parse("application/json"), jsonBody);
-// Crear la solicitud POST a la URL de Vercel
+
+                // Crear la solicitud POST a la URL de Vercel
                 Request request = new Request.Builder()
-                        .url("http://localhost:7000/registroUsuarios")
+                        .url("http://10.185.82.21:7000/registroUsuarios")
                         .post(requestBody)
                         .build();
-// Crear el cliente HTTP
+
+                // Crear el cliente HTTP
                 OkHttpClient client = new OkHttpClient();
-// Enviar la solicitud asíncronamente
+
+                // Enviar la solicitud asíncronamente
                 client.newCall(request).enqueue(new Callback() {
                     @Override
                     public void onFailure(Call call, IOException e) {
-// Manejo del error en caso de fallo de la solicitud
+                        // Manejo del error en caso de fallo de la solicitud
                         e.printStackTrace();
                         runOnUiThread(new Runnable() {
                             @Override
@@ -119,9 +130,10 @@ public class registro extends AppCompatActivity {
                             }
                         });
                     }
+
                     @Override
                     public void onResponse(Call call, Response response) throws IOException {
-// Manejo de la respuesta de la solicitud
+                        // Manejo de la respuesta de la solicitud
                         final String responseBody = response.body().string();
                         runOnUiThread(new Runnable() {
                             @Override
@@ -139,7 +151,6 @@ public class registro extends AppCompatActivity {
                 });
             }
         });
-
     }
 
     // Verificar si el correo es válido utilizando una expresión regular
@@ -147,13 +158,13 @@ public class registro extends AppCompatActivity {
         String emailRegex = "^[A-Za-z0-9+_.-]+@(.+)$";
         return email.matches(emailRegex);
     }
+
     // Verificar si la contraseña cumple con los requisitos mínimos utilizando una expresión regular
     public static boolean isValidPassword(String password) {
         String passwordRegex = "^(?=.*[a-zA-Z])(?=.*\\d)(?=.*[@.#$%¿)><(*´}{°|~`^&+=!?¡]).*$";
         return password.matches(passwordRegex);
     }
 
-
     // Boton de regreso
-
+    // ...
 }

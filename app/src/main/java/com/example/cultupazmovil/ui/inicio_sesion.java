@@ -51,7 +51,7 @@ public class inicio_sesion extends AppCompatActivity {
         registrof.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent iregistro=new Intent(inicio_sesion.this,registradosfire.class);
+                Intent iregistro=new Intent(inicio_sesion.this,registro.class);
                 startActivity(iregistro);
             }
         });

@@ -107,7 +107,7 @@
             android:layout_width="337dp"
             android:layout_height="37dp"
             android:layout_marginTop="716dp"
-            android:text="@string/hyperlink"
+            android:text="@string/hyperlink2"
             android:textSize="19sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

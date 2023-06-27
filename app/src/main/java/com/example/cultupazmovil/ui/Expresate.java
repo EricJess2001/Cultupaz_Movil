@@ -1,5 +1,6 @@
 package com.example.cultupazmovil.ui;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -45,6 +46,7 @@ public class Expresate extends DialogFragment {
         super.onCreate(savedInstanceState);
     }
 
+    @SuppressLint("MissingInflatedId")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         binding = FragmentInformaBinding.inflate(inflater, container, false);
@@ -55,7 +57,7 @@ public class Expresate extends DialogFragment {
         tema = view.findViewById(R.id.temaha);
         expresion = view.findViewById(R.id.expression);
 
-        buttonenviar = view.findViewById(R.id.buttonenviar);
+        buttonenviar = view.findViewById(R.id.btn_empezar);
 
         buttonenviar.setOnClickListener(new View.OnClickListener() {
             @Override

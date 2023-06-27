@@ -15,7 +15,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import org.mindrot.jbcrypt.BCrypt;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -130,7 +129,7 @@ public class inicio_sesion extends AppCompatActivity {
         RequestBody requestBody = RequestBody.create(mediaType, jsonBody.toString());
 
         Request request = new Request.Builder()
-                .url("http://10.185.80.70:7000/loginUsuarios")
+                .url("http://10.185.82.151:7000/loginUsuarios")
                 .post(requestBody)
                 .build();
 

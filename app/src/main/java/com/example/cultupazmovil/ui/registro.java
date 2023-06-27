@@ -15,7 +15,6 @@ import android.widget.Toast;
 
 import com.example.cultupazmovil.R;
 
-import org.mindrot.jbcrypt.BCrypt;
 
 import java.io.IOException;
 
@@ -114,7 +113,7 @@ public class registro extends AppCompatActivity {
 
                 // Crear la solicitud POST a la URL de Vercel
                 Request request = new Request.Builder()
-                        .url("http://10.185.80.70:7000/registroUsuarios")
+                        .url("http://10.185.82.151:7000/registroUsuarios")
                         .post(requestBody)
                         .build();
 

@@ -15,6 +15,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import org.mindrot.jbcrypt.BCrypt;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -34,6 +35,7 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
+import okhttp3.ResponseBody;
 
 public class inicio_sesion extends AppCompatActivity {
 
@@ -107,9 +109,12 @@ public class inicio_sesion extends AppCompatActivity {
         }
     }
 
+
+
     public void checkUser() {
         String correo = reemail.getText().toString().trim();
         String passw = contraseña.getText().toString().trim();
+
 
         OkHttpClient client = new OkHttpClient();
 
@@ -143,61 +148,27 @@ public class inicio_sesion extends AppCompatActivity {
 
             @Override
             public void onResponse(@NonNull Call call, @NonNull Response response) throws IOException {
-                final String responseBody = response.body().string();
+                final String responseBodyString = response.body().string();
 
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
                         if (response.isSuccessful()) {
-                            try {
-                                String responseBody = response.body().string();
-                                JSONObject responseJson = new JSONObject(responseBody);
-                                String token = responseJson.getString("token");
-                                String id = extractIdFromToken(token);
-
-                                if (id != null) {
-                                    // Guardar el token y el id en SharedPreferences
-                                    SharedPreferences sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE);
-                                    SharedPreferences.Editor editor = sharedPreferences.edit();
-                                    editor.putBoolean("estado_inicio_sesion", true);
-                                    editor.putString("token", token);
-                                    editor.putString("id", id);
-                                    editor.apply();
-
-                                    // Mostrar mensaje de éxito
-                                    Toast.makeText(inicio_sesion.this, "Inicio de sesión exitoso", Toast.LENGTH_SHORT).show();
-
-                                    // Redirigir a la siguiente actividad
-                                    Intent intent = new Intent(inicio_sesion.this, MainActivity.class);
-                                    startActivity(intent);
-                                    finish();
-                                }
-                            } catch (JSONException e) {
-                                e.printStackTrace();
-                                Toast.makeText(inicio_sesion.this, "Error al parsear la respuesta", Toast.LENGTH_SHORT).show();
-                            } catch (IOException e) {
-                                e.printStackTrace();
-                                Toast.makeText(inicio_sesion.this, "Error al obtener la respuesta del servidor", Toast.LENGTH_SHORT).show();
-                            }
+                            Toast.makeText(inicio_sesion.this, "Inicio Sesión Exitoso", Toast.LENGTH_SHORT).show();
+                            // Guardar el estado de inicio de sesión en SharedPreferences
+                            SharedPreferences.Editor editor = sp.edit();
+                            editor.apply();
+                            // Redirigir a la actividad principal
+                            Intent intent = new Intent(inicio_sesion.this, MainActivity.class);
+                            startActivity(intent);
+                            finish();
                         } else {
-                            Toast.makeText(inicio_sesion.this, "Credenciales inválidas", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(inicio_sesion.this, "No se pudo iniciar sesión", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
             }
         });
-    }
-
-    private String extractIdFromToken(String token) {
-        String[] chunks = token.split("\\.");
-        String payload = new String(android.util.Base64.decode(chunks[1], android.util.Base64.DEFAULT));
-        try {
-            JSONObject payloadJson = new JSONObject(payload);
-            return payloadJson.getString("id");
-        } catch (JSONException e) {
-            e.printStackTrace();
-            return null;
-        }
     }
 
 }

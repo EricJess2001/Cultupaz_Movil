@@ -15,6 +15,8 @@ import android.widget.Toast;
 
 import com.example.cultupazmovil.R;
 
+import org.mindrot.jbcrypt.BCrypt;
+
 import java.io.IOException;
 
 import okhttp3.Call;
@@ -90,6 +92,8 @@ public class registro extends AppCompatActivity {
                     Toast.makeText(registro.this, "Correo inválido", Toast.LENGTH_SHORT).show();
                     return;
                 }
+
+
 
                 // Crear el objeto JSON con los datos del usuario
                 String jsonBody = "{\"confirPassw\":\"" + confirPassw + "\","

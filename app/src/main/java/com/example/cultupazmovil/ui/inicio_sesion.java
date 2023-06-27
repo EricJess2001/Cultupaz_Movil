@@ -89,7 +89,7 @@ public class inicio_sesion extends AppCompatActivity {
     public Boolean validateUsername() {
         String val = reemail.getText().toString().trim();
         if (val.isEmpty()) {
-            reemail.setError("Username cannot be empty");
+            reemail.setError("Correo incorrecto");
             return false;
         } else {
             reemail.setError(null);
@@ -100,7 +100,7 @@ public class inicio_sesion extends AppCompatActivity {
     public Boolean validatePassword() {
         String val = contraseña.getText().toString().trim();
         if (val.isEmpty()) {
-            contraseña.setError("Password cannot be empty");
+            contraseña.setError("Contraseña incorrecta");
             return false;
         } else {
             contraseña.setError(null);
@@ -129,7 +129,7 @@ public class inicio_sesion extends AppCompatActivity {
         RequestBody requestBody = RequestBody.create(mediaType, jsonBody.toString());
 
         Request request = new Request.Builder()
-                .url("http://10.185.82.151:7000/loginUsuarios")
+                .url("http://10.185.81.234:7000/loginUsuarios")
                 .post(requestBody)
                 .build();
 

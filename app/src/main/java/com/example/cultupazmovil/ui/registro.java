@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import com.example.cultupazmovil.R;
 
+
 import java.io.IOException;
 
 import okhttp3.Call;
@@ -91,6 +92,8 @@ public class registro extends AppCompatActivity {
                     return;
                 }
 
+
+
                 // Crear el objeto JSON con los datos del usuario
                 String jsonBody = "{\"confirPassw\":\"" + confirPassw + "\","
                         + "\"passw\":\"" + passw + "\","
@@ -110,7 +113,7 @@ public class registro extends AppCompatActivity {
 
                 // Crear la solicitud POST a la URL de Vercel
                 Request request = new Request.Builder()
-                        .url("http://10.185.82.21:7000/registroUsuarios")
+                        .url("http://10.185.82.151:7000/registroUsuarios")
                         .post(requestBody)
                         .build();
 

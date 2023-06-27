@@ -1,5 +1,11 @@
 package com.example.cultupazmovil.ui;
 
+<<<<<<< HEAD
+import android.annotation.SuppressLint;
+=======
+import static androidx.databinding.DataBindingUtil.setContentView;
+
+>>>>>>> 32aba48a889447a5fff9a0f1f4badbc74e94f917
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,36 +21,27 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.cultupazmovil.R;
 import com.example.cultupazmovil.adapter.PetAdapter;
 import com.example.cultupazmovil.databinding.FragmentInformaBinding;
-import com.example.cultupazmovil.model.Pet;
-import com.firebase.ui.firestore.FirestoreRecyclerOptions;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.firestore.DocumentReference;
-import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.FirebaseFirestoreSettings;
-import com.google.firebase.firestore.Query;
-
-import java.util.HashMap;
-import java.util.Map;
-
 
 public class Expresate extends DialogFragment {
 
-    RecyclerView mRecycler;
-    PetAdapter mAdapter;
-    FirebaseFirestore mFirestore;
-
     Button buttonenviar;
+
+
     EditText tema, expresion;
-    private FirebaseFirestore mfirestore;
 
     private FragmentInformaBinding binding;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
+
+
     }
 
+<<<<<<< HEAD
+    @SuppressLint("MissingInflatedId")
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         binding = FragmentInformaBinding.inflate(inflater, container, false);
@@ -55,7 +52,7 @@ public class Expresate extends DialogFragment {
         tema = view.findViewById(R.id.temaha);
         expresion = view.findViewById(R.id.expression);
 
-        buttonenviar = view.findViewById(R.id.buttonenviar);
+        buttonenviar = view.findViewById(R.id.btn_empezar);
 
         buttonenviar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -118,5 +115,13 @@ public class Expresate extends DialogFragment {
         super.onStop();
         mAdapter.stopListening();
     }
+=======
+
+>>>>>>> 32aba48a889447a5fff9a0f1f4badbc74e94f917
 }
+
+
+
+
+
 

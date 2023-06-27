@@ -4,6 +4,7 @@ import static com.example.cultupazmovil.ui.registro.isValidEmail;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -18,12 +19,11 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.cultupazmovil.MainActivity;
 import com.example.cultupazmovil.R;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.IOException;
 
@@ -34,102 +34,140 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
+import okhttp3.ResponseBody;
 
 public class inicio_sesion extends AppCompatActivity {
-
 
     EditText reemail, contraseña;
     Button btn_login;
     TextView registrof;
+    SharedPreferences sp;
 
-
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_inicio_sesion);
 
-        //
-
         reemail = findViewById(R.id.username);
         contraseña = findViewById(R.id.contraseña);
         btn_login = findViewById(R.id.loginButton);
-
-
         registrof = findViewById(R.id.registrof);
 
-        registrof.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent iregistro = new Intent(inicio_sesion.this, registro.class);
-                startActivity(iregistro);
-            }
-        });
+        sp = getSharedPreferences("MyPrefs", MODE_PRIVATE);
+
+        // Verificar si el inicio de sesión ya está activo
+        boolean estadoInicioSesion = sp.getBoolean("estado_inicio_sesion", false);
+        if (estadoInicioSesion) {
+            // Redirigir a la actividad principal
+            Intent intent = new Intent(inicio_sesion.this, MainActivity.class);
+            startActivity(intent);
+            finish();
+        }
 
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                String correo = reemail.getText().toString();
-                String passw = contraseña.getText().toString();
-
-
-                // Verificar si el correo ingresado es válido
-                if (!isValidEmail(correo)) {
-                    Toast.makeText(inicio_sesion.this, "Correo inválido", Toast.LENGTH_SHORT).show();
+            public void onClick(View view) {
+                if (!validateUsername() || !validatePassword()) {
+                    // Validación fallida
                     return;
                 }
+                checkUser();
+            }
+        });
 
-                String jsonBody = "{\"correo\":\"" + correo + "\","
-                        + "\"passw\":\"" + passw + "\",";
-
-
-                // Crear el cuerpo de la solicitud POST como JSON
-                RequestBody requestBody = RequestBody.create(MediaType.parse("application/json"), jsonBody);
-
-                // Crear la solicitud POST a la URL de Vercel
-                Request request = new Request.Builder()
-                        .url("http://10.185.82.21:7000/loginUsuarios")
-                        .post(requestBody)
-                        .build();
-
-                // Crear el cliente HTTP
-                OkHttpClient client = new OkHttpClient();
-
-
-                // Enviar la solicitud asíncronamente
-                client.newCall(request).enqueue(new Callback() {
-                    @Override
-                    public void onFailure(Call call, IOException e) {
-                        // Manejo del error en caso de fallo de la solicitud
-                        e.printStackTrace();
-                        runOnUiThread(new Runnable() {
-                            @Override
-                            public void run() {
-                                Toast.makeText(inicio_sesion.this, "Error solicitud login", Toast.LENGTH_SHORT).show();
-                            }
-                        });
-                    }
-
-                    @Override
-                    public void onResponse(Call call, Response response) throws IOException {
-                        // Manejo de la respuesta de la solicitud
-                        final String responseBody = response.body().string();
-                     runOnUiThread(new Runnable() {
-                            @Override
-                            public void run() {
-                                if (response.isSuccessful()) {
-                                    Toast.makeText(inicio_sesion.this, "Inicio Sesión Exitoso", Toast.LENGTH_SHORT).show();
-                                    Intent intent = new Intent(inicio_sesion.this, cultupaz.class);
-                                    startActivity(intent);
-                                } else {
-                                    Toast.makeText(inicio_sesion.this, "No se pudo iniciar sesión: ", Toast.LENGTH_SHORT).show();
-                                }
-                            }
-                        });
-                    }
-                });
+        registrof.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Redirigir a la actividad de registro
+                Intent intent = new Intent(inicio_sesion.this, registro.class);
+                startActivity(intent);
             }
         });
 
     }
+
+    public Boolean validateUsername() {
+        String val = reemail.getText().toString().trim();
+        if (val.isEmpty()) {
+            reemail.setError("Username cannot be empty");
+            return false;
+        } else {
+            reemail.setError(null);
+            return true;
+        }
+    }
+
+    public Boolean validatePassword() {
+        String val = contraseña.getText().toString().trim();
+        if (val.isEmpty()) {
+            contraseña.setError("Password cannot be empty");
+            return false;
+        } else {
+            contraseña.setError(null);
+            return true;
+        }
+    }
+
+
+
+    public void checkUser() {
+        String correo = reemail.getText().toString().trim();
+        String passw = contraseña.getText().toString().trim();
+
+
+        OkHttpClient client = new OkHttpClient();
+
+        JSONObject jsonBody = new JSONObject();
+        try {
+            jsonBody.put("correo", correo);
+            jsonBody.put("passw", passw);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        MediaType mediaType = MediaType.parse("application/json");
+        RequestBody requestBody = RequestBody.create(mediaType, jsonBody.toString());
+
+        Request request = new Request.Builder()
+                .url("http://10.185.82.151:7000/loginUsuarios")
+                .post(requestBody)
+                .build();
+
+        client.newCall(request).enqueue(new Callback() {
+            @Override
+            public void onFailure(@NonNull Call call, @NonNull IOException e) {
+                e.printStackTrace();
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        Toast.makeText(inicio_sesion.this, "Error al enviar la solicitud", Toast.LENGTH_SHORT).show();
+                    }
+                });
+            }
+
+            @Override
+            public void onResponse(@NonNull Call call, @NonNull Response response) throws IOException {
+                final String responseBodyString = response.body().string();
+
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        if (response.isSuccessful()) {
+                            Toast.makeText(inicio_sesion.this, "Inicio Sesión Exitoso", Toast.LENGTH_SHORT).show();
+                            // Guardar el estado de inicio de sesión en SharedPreferences
+                            SharedPreferences.Editor editor = sp.edit();
+                            editor.apply();
+                            // Redirigir a la actividad principal
+                            Intent intent = new Intent(inicio_sesion.this, cultupaz.class);
+                            startActivity(intent);
+                            finish();
+                        } else {
+                            Toast.makeText(inicio_sesion.this, "No se pudo iniciar sesión", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+            }
+        });
+    }
+
 }

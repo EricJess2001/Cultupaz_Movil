@@ -159,7 +159,7 @@ public class inicio_sesion extends AppCompatActivity {
                             SharedPreferences.Editor editor = sp.edit();
                             editor.apply();
                             // Redirigir a la actividad principal
-                            Intent intent = new Intent(inicio_sesion.this, MainActivity.class);
+                            Intent intent = new Intent(inicio_sesion.this, cultupaz.class);
                             startActivity(intent);
                             finish();
                         } else {

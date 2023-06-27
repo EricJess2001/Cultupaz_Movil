@@ -16,12 +16,6 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".ui.inicio_Admin"
-            android:exported="false" />
-        <activity
-            android:name=".ui.inicioAdmin"
-            android:exported="false" />
-        <activity
             android:name=".ui.registradosfire"
             android:exported="false" />
         <activity

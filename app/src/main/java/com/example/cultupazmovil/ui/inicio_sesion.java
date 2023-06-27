@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -42,11 +43,9 @@ import okhttp3.Response;
 
 public class inicio_sesion extends AppCompatActivity {
 
-
     EditText reemail, contraseña;
     Button btn_login;
     TextView registrof;
-
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -54,13 +53,9 @@ public class inicio_sesion extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_inicio_sesion);
 
-        //
-
         reemail = findViewById(R.id.username);
         contraseña = findViewById(R.id.contraseña);
         btn_login = findViewById(R.id.loginButton);
-
-
         registrof = findViewById(R.id.registrof);
 
         registrof.setOnClickListener(new View.OnClickListener() {
@@ -77,7 +72,6 @@ public class inicio_sesion extends AppCompatActivity {
                 String correo = reemail.getText().toString();
                 String passw = contraseña.getText().toString();
 
-
                 // Verificar si el correo ingresado es válido
                 if (!isValidEmail(correo)) {
                     Toast.makeText(inicio_sesion.this, "Correo inválido", Toast.LENGTH_SHORT).show();
@@ -85,21 +79,19 @@ public class inicio_sesion extends AppCompatActivity {
                 }
 
                 String jsonBody = "{\"correo\":\"" + correo + "\","
-                        + "\"passw\":\"" + passw + "\",";
-
+                        + "\"passw\":\"" + passw + "\"}";
 
                 // Crear el cuerpo de la solicitud POST como JSON
                 RequestBody requestBody = RequestBody.create(MediaType.parse("application/json"), jsonBody);
 
                 // Crear la solicitud POST a la URL de Vercel
                 Request request = new Request.Builder()
-                        .url("http://10.185.82.21:7000/loginUsuarios")
+                        .url("http://10.185.80.70:7000/loginUsuarios")
                         .post(requestBody)
                         .build();
 
                 // Crear el cliente HTTP
                 OkHttpClient client = new OkHttpClient();
-
 
                 // Enviar la solicitud asíncronamente
                 client.newCall(request).enqueue(new Callback() {
@@ -119,11 +111,8 @@ public class inicio_sesion extends AppCompatActivity {
                     public void onResponse(Call call, Response response) throws IOException {
                         // Manejo de la respuesta de la solicitud
                         final String responseBody = response.body().string();
-<<<<<<< HEAD
+
                         runOnUiThread(new Runnable() {
-=======
-                     runOnUiThread(new Runnable() {
->>>>>>> 96f9ea446f3fe856ae5f4e0edbb706247df68c4e
                             @Override
                             public void run() {
                                 if (response.isSuccessful()) {
@@ -131,7 +120,7 @@ public class inicio_sesion extends AppCompatActivity {
                                     Intent intent = new Intent(inicio_sesion.this, cultupaz.class);
                                     startActivity(intent);
                                 } else {
-                                    Toast.makeText(inicio_sesion.this, "No se pudo iniciar sesión: ", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(inicio_sesion.this, "No se pudo iniciar sesión", Toast.LENGTH_SHORT).show();
                                 }
                             }
                         });
@@ -139,6 +128,11 @@ public class inicio_sesion extends AppCompatActivity {
                 });
             }
         });
+    }
 
+    private boolean isValidEmail(CharSequence target) {
+        return !TextUtils.isEmpty(target) && android.util.Patterns.EMAIL_ADDRESS.matcher(target).matches();
     }
 }
+
+

@@ -8,7 +8,7 @@ public class ApiMuroo {
 
     public static Retrofit getApiMuro() {
         retrofit = new Retrofit.Builder()
-                .baseUrl("http://192.168.20.8:7000/")
+                .baseUrl("http://10.185.80.109:7000/verPublicaciones")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         return retrofit;

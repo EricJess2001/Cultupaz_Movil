@@ -56,13 +56,13 @@ public class inicio_sesion extends AppCompatActivity {
         sp = getSharedPreferences("Cultupaz", MODE_PRIVATE);
 
         // Verificar si el inicio de sesión ya está activo
-        boolean estadoInicioSesion = sp.getBoolean("estado_inicio_sesion", false);
-        if (estadoInicioSesion) {
+        //boolean estadoInicioSesion = sp.getBoolean("estado_inicio_sesion", false);
+       /* if (estadoInicioSesion) {
             // Redirigir a la actividad principal
             Intent intent = new Intent(inicio_sesion.this, MainActivity.class);
             startActivity(intent);
             finish();
-        }
+        }*/
 
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -129,7 +129,7 @@ public class inicio_sesion extends AppCompatActivity {
         RequestBody requestBody = RequestBody.create(mediaType, jsonBody.toString());
 
         Request request = new Request.Builder()
-                .url("http://192.168.20.8:7000/loginUsuarios")
+                .url("http://10.185.80.109:7000/loginUsuarios")
                 .post(requestBody)
                 .build();
 
@@ -163,7 +163,7 @@ public class inicio_sesion extends AppCompatActivity {
                                 editor.putString("idUsuario", idUsuario);
                                 editor.apply();
 
-                                Toast.makeText(inicio_sesion.this, "idUsuario" + idUsuario, Toast.LENGTH_SHORT).show();
+
 
                                 Toast.makeText(inicio_sesion.this, "Inicio Sesión Exitoso", Toast.LENGTH_SHORT).show();
 

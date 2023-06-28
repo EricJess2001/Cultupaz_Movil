@@ -20,19 +20,7 @@ public class info_web extends Fragment {
         return binding.getRoot();
     }
 
-    @Override
-    public void onViewCreated(View view, Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-        // Load the image resource with scaling
-        loadScaledImage();
-    }
 
-    private void loadScaledImage() {
-        BitmapFactory.Options options = new BitmapFactory.Options();
-        options.inSampleSize = 2; // Scale down the image by a factor of 2
 
-        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.artesania, options);
-        // Set the scaled bitmap to an ImageView
-        binding.imgsvg1.setImageBitmap(bitmap);
-    }
+
 }

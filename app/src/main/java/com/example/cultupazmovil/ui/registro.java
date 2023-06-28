@@ -34,9 +34,10 @@ public class registro extends AppCompatActivity {
             reNumeroiden, reemail, retelefono, reusuario, confcontraseña;
     Spinner spinner_documento, spinner_genero;
 
-    String idTipo, estadoUsuario;
+    String idTipo, estadoUsuario, foto;
 
     Button registrarse;
+
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -48,6 +49,8 @@ public class registro extends AppCompatActivity {
 
         idTipo = "1";
         estadoUsuario = "1";
+        foto = "null";
+
         contraseña = findViewById(R.id.contraseña);
         confcontraseña = findViewById(R.id.confirmarcontraseña);
         renombre = findViewById(R.id.nombre);
@@ -97,6 +100,7 @@ public class registro extends AppCompatActivity {
                 // Crear el objeto JSON con los datos del usuario
                 String jsonBody = "{\"confirPassw\":\"" + confirPassw + "\","
                         + "\"passw\":\"" + passw + "\","
+                        + "\"foto\":\"" + foto + "\","
                         + "\"nombres\":\"" + nombres + "\","
                         + "\"apellidos\":\"" + apellidos + "\","
                         + "\"tipoDocumento\":\"" + tipoDocumento + "\","
@@ -113,7 +117,7 @@ public class registro extends AppCompatActivity {
 
                 // Crear la solicitud POST a la URL de Vercel
                 Request request = new Request.Builder()
-                        .url("http://192.168.20.8:7000/registroUsuarios")
+                        .url("http://10.185.80.109:7000/registroUsuarios")
                         .post(requestBody)
                         .build();
 

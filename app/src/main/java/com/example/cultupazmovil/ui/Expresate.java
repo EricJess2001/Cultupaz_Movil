@@ -16,6 +16,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.DialogFragment;
 
+import com.example.cultupazmovil.MainActivity;
 import com.example.cultupazmovil.R;
 import com.example.cultupazmovil.databinding.FragmentInfoWebBinding;
 
@@ -63,7 +64,7 @@ public class Expresate extends DialogFragment {
                 RequestBody requestBody = RequestBody.create(MediaType.parse("application/json"), jsonBody);
 
                 Request request = new Request.Builder()
-                        .url("http://192.168.20.8:7000/publicacion")
+                        .url("http://10.185.80.109:7000/publicacion")
                         .post(requestBody)
                         .build();
 
@@ -89,7 +90,7 @@ public class Expresate extends DialogFragment {
                             public void run() {
                                 if (response.isSuccessful()) {
                                     Toast.makeText(getActivity(), "Tu respuesta fue enviada exitosamente", Toast.LENGTH_SHORT).show();
-                                    Intent intent = new Intent(getActivity(), inicio_sesion.class);
+                                    Intent intent = new Intent(getActivity(), MainActivity.class);
                                     startActivity(intent);
                                 } else {
                                     Toast.makeText(getActivity(), "Error al subir", Toast.LENGTH_SHORT).show();

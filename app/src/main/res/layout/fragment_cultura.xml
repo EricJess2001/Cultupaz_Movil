@@ -51,6 +51,7 @@
             android:layout_marginEnd="12dp"
             android:text="@string/pregunta"
             android:textSize="17sp"
+            android:textColor="@color/purpledark"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

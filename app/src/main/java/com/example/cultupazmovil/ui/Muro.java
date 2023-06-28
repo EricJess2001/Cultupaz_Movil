@@ -2,13 +2,13 @@ package com.example.cultupazmovil.ui;
 
 public class Muro {
 
-    String titulo;
+   private String titulo;
 
-    String descripcion;
+    private String descripcion;
 
-    String fechaCreacion;
+    private String fechaCreacion;
 
-    String idUsuario;
+    private String idUsuario;
 
     public Muro(String titulo, String descripcion, String fechaCreacion, String idUsuario) {
         this.titulo = titulo;

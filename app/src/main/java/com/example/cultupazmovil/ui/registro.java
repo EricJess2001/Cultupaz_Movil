@@ -113,7 +113,7 @@ public class registro extends AppCompatActivity {
 
                 // Crear la solicitud POST a la URL de Vercel
                 Request request = new Request.Builder()
-                        .url("http://10.185.81.234:7000/registroUsuarios")
+                        .url("http://192.168.20.8:7000/registroUsuarios")
                         .post(requestBody)
                         .build();
 
@@ -168,6 +168,5 @@ public class registro extends AppCompatActivity {
         return password.matches(passwordRegex);
     }
 
-    // Boton de regreso
-    // ...
+
 }

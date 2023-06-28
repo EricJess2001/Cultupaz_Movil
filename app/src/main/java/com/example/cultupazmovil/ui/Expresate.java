@@ -1,7 +1,10 @@
 package com.example.cultupazmovil.ui;
 
+import static android.content.Context.MODE_PRIVATE;
+
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -31,23 +34,19 @@ public class Expresate extends DialogFragment {
     private Button buttonenviar;
     private EditText tema, expresion;
 
-    private FragmentInfoWebBinding binding;
-
     private String idUsuario;
-
-
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        binding = FragmentInfoWebBinding.inflate(inflater, container, false);
         View view = inflater.inflate(R.layout.fragment_expresate, container, false);
 
         tema = view.findViewById(R.id.temaha);
-        idUsuario = "1";
         expresion = view.findViewById(R.id.expression);
         buttonenviar = view.findViewById(R.id.buttonenviar);
+
+        SharedPreferences sp = getActivity().getSharedPreferences("Cultupaz", MODE_PRIVATE);
+        idUsuario = sp.getString("idUsuario", "");
 
         buttonenviar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,12 +58,12 @@ public class Expresate extends DialogFragment {
 
                 String jsonBody = "{\"titulo\":\"" + titulo + "\","
                         + "\"idUsuario\":\"" + idUsuario + "\","
-                        + "\"descripcion\":\"" + descripcion + "\",";
+                        + "\"descripcion\":\"" + descripcion + "\"}";
 
                 RequestBody requestBody = RequestBody.create(MediaType.parse("application/json"), jsonBody);
 
                 Request request = new Request.Builder()
-                        .url("http://10.185.81.234:7000/publicacion")
+                        .url("http://192.168.20.8:7000/publicacion")
                         .post(requestBody)
                         .build();
 
@@ -104,5 +103,4 @@ public class Expresate extends DialogFragment {
 
         return view;
     }
-
 }

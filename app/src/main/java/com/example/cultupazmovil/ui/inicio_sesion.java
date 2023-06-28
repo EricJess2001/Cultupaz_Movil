@@ -53,7 +53,7 @@ public class inicio_sesion extends AppCompatActivity {
         btn_login = findViewById(R.id.loginButton);
         registrof = findViewById(R.id.registrof);
 
-        sp = getSharedPreferences("MyPrefs", MODE_PRIVATE);
+        sp = getSharedPreferences("Cultupaz", MODE_PRIVATE);
 
         // Verificar si el inicio de sesión ya está activo
         boolean estadoInicioSesion = sp.getBoolean("estado_inicio_sesion", false);
@@ -129,7 +129,7 @@ public class inicio_sesion extends AppCompatActivity {
         RequestBody requestBody = RequestBody.create(mediaType, jsonBody.toString());
 
         Request request = new Request.Builder()
-                .url("http://10.185.81.234:7000/loginUsuarios")
+                .url("http://192.168.20.8:7000/loginUsuarios")
                 .post(requestBody)
                 .build();
 
@@ -153,14 +153,28 @@ public class inicio_sesion extends AppCompatActivity {
                     @Override
                     public void run() {
                         if (response.isSuccessful()) {
-                            Toast.makeText(inicio_sesion.this, "Inicio Sesión Exitoso", Toast.LENGTH_SHORT).show();
-                            // Guardar el estado de inicio de sesión en SharedPreferences
-                            SharedPreferences.Editor editor = sp.edit();
-                            editor.apply();
-                            // Redirigir a la actividad principal
-                            Intent intent = new Intent(inicio_sesion.this, cultupaz.class);
-                            startActivity(intent);
-                            finish();
+                            try {
+                                JSONObject jsonResponse = new JSONObject(responseBodyString);
+                                String idUsuario = jsonResponse.getString("idUsuario");
+
+                                // Guardar el estado de inicio de sesión y el idUsuario en SharedPreferences
+                                SharedPreferences.Editor editor = sp.edit();
+                                editor.putBoolean("estado_inicio_sesion", true);
+                                editor.putString("idUsuario", idUsuario);
+                                editor.apply();
+
+                                Toast.makeText(inicio_sesion.this, "idUsuario" + idUsuario, Toast.LENGTH_SHORT).show();
+
+                                Toast.makeText(inicio_sesion.this, "Inicio Sesión Exitoso", Toast.LENGTH_SHORT).show();
+
+                                // Redirigir a la actividad principal
+                                Intent intent = new Intent(inicio_sesion.this, cultupaz.class);
+                                startActivity(intent);
+                                finish();
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                                Toast.makeText(inicio_sesion.this, "Error en el formato de respuesta del servidor", Toast.LENGTH_SHORT).show();
+                            }
                         } else {
                             Toast.makeText(inicio_sesion.this, "No se pudo iniciar sesión", Toast.LENGTH_SHORT).show();
                         }

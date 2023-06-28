@@ -64,7 +64,7 @@ public class Expresate extends DialogFragment {
                 RequestBody requestBody = RequestBody.create(MediaType.parse("application/json"), jsonBody);
 
                 Request request = new Request.Builder()
-                        .url("http://10.185.80.109:7000/publicacion")
+                        .url("http://10.185.81.241:7000/publicacion")
                         .post(requestBody)
                         .build();
 

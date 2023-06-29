@@ -1,65 +1,131 @@
 package com.example.cultupazmovil.ui;
 
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.os.AsyncTask;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 import com.example.cultupazmovil.R;
-import com.example.cultupazmovil.adapter.MuroAdapter;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
-import java.util.List;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
 
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
+public class ConsumoMuro extends AppCompatActivity {
 
-public class ConsumoMuro extends Fragment {
-
-    private List<Muro> verMuro;
-    private RecyclerView recyclerViewmuro1;
-    private MuroAdapter muroAdapter;
+    private LinearLayout muroLayout;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_expresate, container, false);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.muro);
 
-        recyclerViewmuro1 = view.findViewById(R.id.recyclerViewmuro1);
-        recyclerViewmuro1.setLayoutManager(new GridLayoutManager(getContext(), 1));
+        muroLayout = findViewById(R.id.linerMuro);
 
-        muroAdapter = new MuroAdapter(verMuro, getContext());
-        recyclerViewmuro1.setAdapter(muroAdapter);
-
-        showverMuro();
-
-        return view;
+        SharedPreferences sharedPreferences = getSharedPreferences("Cultupaz", Context.MODE_PRIVATE);
+        String idUsuario = sharedPreferences.getString("idUsuario", "");
+        Toast.makeText(this, "idUsuario: " + idUsuario, Toast.LENGTH_SHORT).show();
+        mostrarNotificacionesPro(idUsuario);
     }
 
-    public void showverMuro() {
-        Call<List<Muro>> call = ApiMuroo.getApiMuro().create(Apimuro.class).getverMuro();
-        call.enqueue(new Callback<List<Muro>>() {
-            @Override
-            public void onResponse(Call<List<Muro>> call, Response<List<Muro>> response) {
-                if (response.isSuccessful()) {
-                    verMuro = response.body();
-                    muroAdapter = new MuroAdapter(verMuro, getContext());
-                    recyclerViewmuro1.setAdapter(muroAdapter);
+    private void mostrarNotificacionesPro(String idUsuario) {
+        new HttpGetTaskPro().execute("http://192.168.20.8:7000/verMisPublicaciones/" + idUsuario);
+    }
+
+    private class HttpGetTaskPro extends AsyncTask<String, Void, String> {
+
+        @Override
+        protected String doInBackground(String... urls) {
+            String response = "";
+
+            try {
+                URL url = new URL(urls[0]);
+                HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+                connection.setRequestMethod("GET");
+
+                InputStream inputStream = connection.getInputStream();
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
+                String line;
+                while ((line = bufferedReader.readLine()) != null) {
+                    response += line;
                 }
+
+                bufferedReader.close();
+                inputStream.close();
+                connection.disconnect();
+
+            } catch (IOException e) {
+                e.printStackTrace();
             }
 
-            @Override
-            public void onFailure(Call<List<Muro>> call, Throwable t) {
-                Toast.makeText(getActivity(), "ERROR DE CONEXION", Toast.LENGTH_SHORT).show();
+            return response;
+        }
+
+        @Override
+        protected void onPostExecute(String response) {
+            convertirAResultado(response);
+        }
+
+        private void convertirAResultado(String response) {
+            try {
+                JSONArray jsonArray = new JSONArray(response);
+
+                for (int i = 0; i < jsonArray.length(); i++) {
+                    JSONObject jsonObject = jsonArray.getJSONObject(i);
+                    String titulo = jsonObject.getString("titulo");
+                    String descripcion = jsonObject.getString("descripcion");
+
+                    // Crear un CardView para cada elemento
+                    CardView cardView = new CardView(ConsumoMuro.this);
+                    LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+                    layoutParams.setMargins(16, 16, 16, 16); // Ajusta el margen inferior
+                    cardView.setLayoutParams(layoutParams);
+                    cardView.setCardElevation(8); // Controla la sombra y la apariencia flotante
+
+                    // Crear un LinearLayout para contener los textos en el CardView
+                    LinearLayout cardContentLayout = new LinearLayout(ConsumoMuro.this);
+                    cardContentLayout.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+                    cardContentLayout.setOrientation(LinearLayout.VERTICAL);
+                    cardContentLayout.setPadding(16, 16, 16, 16);
+
+                    // Crear los TextView y añadirlos al cardContentLayout
+                    TextView tituloTextView = new TextView(ConsumoMuro.this);
+                    tituloTextView.setText(titulo);
+                    tituloTextView.setTextColor(getResources().getColor(R.color.black));
+                    tituloTextView.setTextSize(20);
+                    cardContentLayout.addView(tituloTextView);
+
+                    TextView descripcionTextView = new TextView(ConsumoMuro.this);
+                    descripcionTextView.setText(descripcion);
+                    descripcionTextView.setTextSize(20);
+                    cardContentLayout.addView(descripcionTextView);
+
+                    // Añadir el cardContentLayout al CardView
+                    cardView.addView(cardContentLayout);
+
+                    // Añadir el CardView al muroLayout
+                    muroLayout.addView(cardView);
+
+                }
+
+            } catch (JSONException e) {
+                e.printStackTrace();
             }
-        });
+        }
     }
 }

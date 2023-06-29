@@ -2,7 +2,6 @@ package com.example.cultupazmovil.ui;
 
 import static android.content.Context.MODE_PRIVATE;
 
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -18,7 +17,7 @@ import androidx.fragment.app.DialogFragment;
 
 import com.example.cultupazmovil.MainActivity;
 import com.example.cultupazmovil.R;
-import com.example.cultupazmovil.databinding.FragmentInfoWebBinding;
+
 
 import java.io.IOException;
 
@@ -32,7 +31,7 @@ import okhttp3.Response;
 
 public class Expresate extends DialogFragment {
 
-    private Button buttonenviar;
+    private Button buttonenviar, muroo2;
     private EditText tema, expresion;
 
     private String idUsuario;
@@ -45,6 +44,7 @@ public class Expresate extends DialogFragment {
         tema = view.findViewById(R.id.temaha);
         expresion = view.findViewById(R.id.expression);
         buttonenviar = view.findViewById(R.id.buttonenviar);
+        muroo2 = view.findViewById(R.id.muroo2);
 
         SharedPreferences sp = getActivity().getSharedPreferences("Cultupaz", MODE_PRIVATE);
         idUsuario = sp.getString("idUsuario", "");
@@ -64,7 +64,7 @@ public class Expresate extends DialogFragment {
                 RequestBody requestBody = RequestBody.create(MediaType.parse("application/json"), jsonBody);
 
                 Request request = new Request.Builder()
-                        .url("http://10.185.81.241:7000/publicacion")
+                        .url("http://192.168.20.8:7000/publicacion")
                         .post(requestBody)
                         .build();
 
@@ -99,6 +99,14 @@ public class Expresate extends DialogFragment {
                         });
                     }
                 });
+            }
+        });
+
+        muroo2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), ConsumoMuro.class);
+                startActivity(intent);
             }
         });
 

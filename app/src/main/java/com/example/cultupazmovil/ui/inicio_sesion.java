@@ -129,7 +129,7 @@ public class inicio_sesion extends AppCompatActivity {
         RequestBody requestBody = RequestBody.create(mediaType, jsonBody.toString());
 
         Request request = new Request.Builder()
-                .url("http://10.185.81.241:7000/loginUsuarios")
+                .url("http://192.168.20.8:7000/loginUsuarios")
                 .post(requestBody)
                 .build();
 

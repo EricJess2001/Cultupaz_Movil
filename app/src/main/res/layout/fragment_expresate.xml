@@ -100,10 +100,14 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
-                    <androidx.recyclerview.widget.RecyclerView
-                        android:id="@+id/recyclerViewmuro1"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent" />
+                   <Button
+                       android:id="@+id/muroo2"
+                       android:layout_width="wrap_content"
+                       android:layout_height="match_parent"
+                       android:text="Muro"
+                       android:textColor="@color/white"
+                       android:textSize="20sp"
+                       android:layout_gravity="center"/>
 
                 </LinearLayout>
 
